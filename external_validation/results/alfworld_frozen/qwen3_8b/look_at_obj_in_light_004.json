@@ -1,0 +1,97 @@
+{
+  "protocol": "single-shot frozen open-loop plan; no replanning or action substitution",
+  "model": "qwen3:8b",
+  "task_type": "look_at_obj_in_light",
+  "game_index": 4,
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020048_814402/game.tw-pddl",
+  "objective": "examine the book with the desklamp.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: examine the book with the desklamp.",
+  "initial_admissible_commands": [
+    "go to bed 1",
+    "go to desk 1",
+    "go to desk 2",
+    "go to drawer 1",
+    "go to drawer 2",
+    "go to drawer 3",
+    "go to drawer 4",
+    "go to drawer 5",
+    "go to drawer 6",
+    "go to garbagecan 1",
+    "go to laundryhamper 1",
+    "go to safe 1",
+    "go to shelf 1",
+    "go to shelf 2",
+    "go to shelf 3",
+    "go to shelf 4",
+    "go to shelf 5",
+    "go to shelf 6",
+    "help",
+    "inventory",
+    "look"
+  ],
+  "raw_model_output": "{\"actions\":[\"go to desk 1\",\"examine desklamp\",\"go to shelf 1\",\"look\",\"examine book\"]}",
+  "planned_actions": [
+    "go to desk 1",
+    "examine desklamp",
+    "go to shelf 1",
+    "look",
+    "examine book"
+  ],
+  "executed_trace": [
+    {
+      "step": 1,
+      "action": "go to desk 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at desk 1. On the desk 1, you see a alarmclock 2, a creditcard 1, a desklamp 1, and a keychain 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "action": "examine desklamp",
+      "admissible_before_step": false,
+      "observation": "Nothing happens.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "action": "go to shelf 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1, and a pen 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "action": "look",
+      "admissible_before_step": true,
+      "observation": "You are facing the shelf 1. Next to it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "action": "examine book",
+      "admissible_before_step": false,
+      "observation": "Nothing happens.",
+      "score": 0,
+      "done": false,
+      "won": false
+    }
+  ],
+  "planned_action_count": 5,
+  "executed_action_count": 5,
+  "admissible_action_rate": 0.6,
+  "schema_validity": 1.0,
+  "abstract_dependency_validity": 1.0,
+  "pre_execution_score": 1.0,
+  "success": false,
+  "final_score": 0,
+  "terminated": false,
+  "latency_seconds": 1.973
+}

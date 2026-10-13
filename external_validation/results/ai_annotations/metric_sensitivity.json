@@ -1,0 +1,57 @@
+{
+  "caveat": "Exploratory AI-assisted audited labels; not an independent human gold standard.",
+  "n": 120,
+  "metrics": [
+    {
+      "metric": "node_f1",
+      "spearman": 0.4960591410033358,
+      "auroc_valid_vs_other": 0.8173524844720497
+    },
+    {
+      "metric": "edge_f1",
+      "spearman": 0.23097400815419647,
+      "auroc_valid_vs_other": 0.6372282608695652
+    },
+    {
+      "metric": "fuzzy_node_f1",
+      "spearman": 0.4468738105855109,
+      "auroc_valid_vs_other": 0.7991071428571429
+    },
+    {
+      "metric": "catalog_validity",
+      "spearman": -0.05016487443661422,
+      "auroc_valid_vs_other": 0.4945652173913043
+    },
+    {
+      "metric": "static_external_score",
+      "spearman": -0.05016487443661422,
+      "auroc_valid_vs_other": 0.4945652173913043
+    }
+  ],
+  "groups": [
+    {
+      "label": "Valid",
+      "n": 92,
+      "node_f1_mean": 0.6878243695652173,
+      "edge_f1_mean": 0.3112956413043478,
+      "fuzzy_node_f1_mean": 0.7686891413043477,
+      "catalog_validity_mean": 0.9945652173913043
+    },
+    {
+      "label": "Partially valid",
+      "n": 18,
+      "node_f1_mean": 0.17667361111111113,
+      "edge_f1_mean": 0.12128611111111111,
+      "fuzzy_node_f1_mean": 0.3642396666666667,
+      "catalog_validity_mean": 1
+    },
+    {
+      "label": "Invalid",
+      "n": 10,
+      "node_f1_mean": 0.1238096,
+      "edge_f1_mean": 0.028708100000000004,
+      "fuzzy_node_f1_mean": 0.5153247999999999,
+      "catalog_validity_mean": 1
+    }
+  ]
+}

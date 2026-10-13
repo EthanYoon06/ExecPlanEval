@@ -1,0 +1,214 @@
+{
+  "integrity": {
+    "tasks": 50,
+    "rows": 350,
+    "clusters": 50,
+    "rows_per_cluster": 7,
+    "topologies": {
+      "chain4": 10,
+      "diamond4": 10,
+      "fork_join5": 10,
+      "double_diamond6": 10,
+      "chain6": 10
+    },
+    "label_execution_agreement": 1.0
+  },
+  "resampling": {
+    "replicates": 2000,
+    "seed": 20260826,
+    "method": "non-interpolated percentile indices 50 and 1950",
+    "note": "Independent random.choices, scipy.stats.spearmanr, and sklearn.metrics.roc_auc_score implementation; the original src/statistics.py is not imported."
+  },
+  "metrics": {
+    "node_f1": {
+      "rho": 0.18802320496939437,
+      "auc": 0.605,
+      "rho_saved": 0.1880232049693944,
+      "auc_saved": 0.605,
+      "point_matches": true,
+      "independent_task_cluster_ci": {
+        "rho": [
+          0.18714783914196106,
+          0.19172724564817467
+        ],
+        "auc": [
+          0.6044666666666667,
+          0.607
+        ]
+      },
+      "saved_ci": {
+        "rho": [
+          0.18714783914196112,
+          0.1917272456481747
+        ],
+        "auc": [
+          0.6044666666666667,
+          0.607
+        ]
+      },
+      "ci_matches": true,
+      "topology_stratified_task_cluster_ci": {
+        "rho": [
+          0.18802320496939437,
+          0.18802320496939437
+        ],
+        "auc": [
+          0.605,
+          0.605
+        ]
+      }
+    },
+    "edge_f1": {
+      "rho": 0.6379264829044333,
+      "auc": 0.8683333333333333,
+      "rho_saved": 0.6379264829044334,
+      "auc_saved": 0.8683333333333333,
+      "point_matches": true,
+      "independent_task_cluster_ci": {
+        "rho": [
+          0.6137598057076133,
+          0.6613964241854541
+        ],
+        "auc": [
+          0.8546166666666667,
+          0.8812333333333334
+        ]
+      },
+      "saved_ci": {
+        "rho": [
+          0.6137598057076133,
+          0.6613964241854541
+        ],
+        "auc": [
+          0.8546166666666667,
+          0.8812333333333333
+        ]
+      },
+      "ci_matches": true,
+      "topology_stratified_task_cluster_ci": {
+        "rho": [
+          0.6379264829044333,
+          0.6379264829044333
+        ],
+        "auc": [
+          0.8683333333333333,
+          0.8683333333333333
+        ]
+      }
+    },
+    "pre_execution_score": {
+      "rho": 0.9509137690720523,
+      "auc": 1.0,
+      "rho_saved": 0.9509137690720523,
+      "auc_saved": 1.0,
+      "point_matches": true,
+      "independent_task_cluster_ci": {
+        "rho": [
+          0.9508941159348259,
+          0.9511380648969644
+        ],
+        "auc": [
+          0.9999999999999999,
+          1.0
+        ]
+      },
+      "saved_ci": {
+        "rho": [
+          0.9508941159348259,
+          0.9511380648969646
+        ],
+        "auc": [
+          1.0,
+          1.0
+        ]
+      },
+      "ci_matches": true,
+      "topology_stratified_task_cluster_ci": {
+        "rho": [
+          0.9509137690720523,
+          0.9509137690720523
+        ],
+        "auc": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "dependency_only": {
+      "rho": 0.9512415008650231,
+      "auc": 1.0,
+      "rho_saved": 0.9512415008650233,
+      "auc_saved": 1.0,
+      "point_matches": true,
+      "independent_task_cluster_ci": {
+        "rho": [
+          0.9511755176062907,
+          0.9515815527584469
+        ],
+        "auc": [
+          0.9999999999999999,
+          1.0
+        ]
+      },
+      "saved_ci": {
+        "rho": [
+          0.9511755176062908,
+          0.951581552758447
+        ],
+        "auc": [
+          1.0,
+          1.0
+        ]
+      },
+      "ci_matches": true,
+      "topology_stratified_task_cluster_ci": {
+        "rho": [
+          0.9512415008650231,
+          0.9512415008650231
+        ],
+        "auc": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "static_executability_only": {
+      "rho": 0.4697965416175687,
+      "auc": 0.6666666666666667,
+      "rho_saved": 0.46979654161756873,
+      "auc_saved": 0.6666666666666666,
+      "point_matches": true,
+      "independent_task_cluster_ci": {
+        "rho": [
+          0.46975388712850147,
+          0.46993382573140674
+        ],
+        "auc": [
+          0.6666666666666666,
+          0.6666666666666667
+        ]
+      },
+      "saved_ci": {
+        "rho": [
+          0.4697538871285016,
+          0.4699338257314068
+        ],
+        "auc": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "ci_matches": true,
+      "topology_stratified_task_cluster_ci": {
+        "rho": [
+          0.4697965416175687,
+          0.4697965416175687
+        ],
+        "auc": [
+          0.6666666666666667,
+          0.6666666666666667
+        ]
+      }
+    }
+  }
+}

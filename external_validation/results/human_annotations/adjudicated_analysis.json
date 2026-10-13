@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-08-27",
+  "sample_size": 120,
+  "consensus_construction": {
+    "rater_agreement": 91,
+    "adjudicated": 29,
+    "unresolved": 0
+  },
+  "adjudication_provenance": {
+    "adjudicator_ids_in_file": [
+      "Adjudicator1"
+    ],
+    "completed_at_values": [
+      "2026-08-27"
+    ],
+    "identity_independence_verified_by_files": false
+  },
+  "final_label_counts": {
+    "overall_validity": {
+      "Invalid": 27,
+      "Partially valid": 21,
+      "Valid": 72
+    },
+    "tool_selection": {
+      "Correct": 90,
+      "Incorrect": 15,
+      "Partially correct": 15
+    },
+    "dependency_validity": {
+      "Correct": 98,
+      "Incorrect dependencies": 22
+    },
+    "executability": {
+      "Executable": 91,
+      "Not executable": 27,
+      "Uncertain": 2
+    },
+    "goal_completion": {
+      "Complete": 84,
+      "Not complete": 26,
+      "Partial": 10
+    },
+    "alternative_valid_plan": {
+      "No": 33,
+      "Yes": 87
+    },
+    "primary_error_type": {
+      "Extra node": 5,
+      "Hallucination": 10,
+      "Missing edge": 1,
+      "Missing node": 12,
+      "None": 72,
+      "Wrong edge": 17,
+      "Wrong tool": 3
+    }
+  },
+  "overall_validity_by_subset": {
+    "TaskBench:dailylifeapis": {
+      "Invalid": 1,
+      "Partially valid": 12,
+      "Valid": 7
+    },
+    "TaskBench:huggingface": {
+      "Invalid": 3,
+      "Partially valid": 3,
+      "Valid": 14
+    },
+    "TaskBench:multimedia": {
+      "Partially valid": 3,
+      "Valid": 17
+    },
+    "WorFBench:alfworld": {
+      "Invalid": 13,
+      "Valid": 7
+    },
+    "WorFBench:webshop": {
+      "Invalid": 8,
+      "Valid": 12
+    },
+    "WorFBench:wikihow": {
+      "Invalid": 2,
+      "Partially valid": 3,
+      "Valid": 15
+    }
+  },
+  "metric_associations": {
+    "node_f1": {
+      "spearman_rho": 0.23972004344787856,
+      "spearman_task_bootstrap_95ci": [
+        0.05059330579638195,
+        0.419262789111726
+      ],
+      "auroc_valid_vs_other": 0.5720486111111112,
+      "auroc_task_bootstrap_95ci": [
+        0.4731856601573885,
+        0.6718002392344498
+      ],
+      "within_subset_centered_rho": 0.08440033353030285
+    },
+    "edge_f1": {
+      "spearman_rho": 0.029812236385021246,
+      "spearman_task_bootstrap_95ci": [
+        -0.15102336039853856,
+        0.19539557353713677
+      ],
+      "auroc_valid_vs_other": 0.4583333333333333,
+      "auroc_task_bootstrap_95ci": [
+        0.36192592592592593,
+        0.5505683474205771
+      ],
+      "within_subset_centered_rho": -0.13984826101990588
+    },
+    "fuzzy_node_f1": {
+      "spearman_rho": 0.23060671111102451,
+      "spearman_task_bootstrap_95ci": [
+        0.044487060292560214,
+        0.4155098593427903
+      ],
+      "auroc_valid_vs_other": 0.5724826388888888,
+      "auroc_task_bootstrap_95ci": [
+        0.47109375,
+        0.6750841750841751
+      ],
+      "within_subset_centered_rho": 0.19581420266084423
+    },
+    "graph_overlap": {
+      "spearman_rho": 0.19174096456849302,
+      "spearman_task_bootstrap_95ci": [
+        0.005440895489452012,
+        0.36802010501078186
+      ],
+      "auroc_valid_vs_other": 0.5399305555555556,
+      "auroc_task_bootstrap_95ci": [
+        0.4331851851851852,
+        0.6455714285714286
+      ],
+      "within_subset_centered_rho": -0.09533840976318564
+    },
+    "catalog_validity": {
+      "spearman_rho": -0.07250679181120129,
+      "spearman_task_bootstrap_95ci": [
+        -0.14098497814593786,
+        -0.06240677824347719
+      ],
+      "auroc_valid_vs_other": 0.4930555555555556,
+      "auroc_task_bootstrap_95ci": [
+        0.4772727272727273,
+        0.5
+      ],
+      "within_subset_centered_rho": -0.0015976549202692074
+    },
+    "static_external_score": {
+      "spearman_rho": -0.07250679181120129,
+      "spearman_task_bootstrap_95ci": [
+        -0.14098497814593786,
+        -0.06240677824347719
+      ],
+      "auroc_valid_vs_other": 0.4930555555555556,
+      "auroc_task_bootstrap_95ci": [
+        0.4772727272727273,
+        0.5
+      ],
+      "within_subset_centered_rho": -0.0015976549202692074
+    }
+  },
+  "interpretation_guardrail": "The supplied file resolves all categorical disagreements, but file contents alone do not verify the adjudicator's identity or independence. Associations are therefore reported as adjudicated-label analyses, not as independently certified human ground truth."
+}

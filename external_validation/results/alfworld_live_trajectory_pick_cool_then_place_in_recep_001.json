@@ -1,0 +1,966 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091811_414150/game.tw-pddl",
+  "objective": "cool some bread and put it in countertop.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some bread and put it in countertop.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: cool some bread and put it in countertop.",
+      "action": "go to fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to fridge 1\"}",
+      "observation": "You arrive at fridge 1. The fridge 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at fridge 1. The fridge 1 is closed.",
+      "action": "open fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open fridge 1\"}",
+      "observation": "You open the fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "You open the fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "action": "examine countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 1\"}",
+      "observation": "On the countertop 1, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "On the countertop 1, you see a mug 1.",
+      "action": "go to countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 2\"}",
+      "observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "action": "examine countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 2\"}",
+      "observation": "On the countertop 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "On the countertop 2, you see nothing.",
+      "action": "go to cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 1\"}",
+      "observation": "You arrive at cabinet 1. On the cabinet 1, you see a bowl 1, and a plate 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "You arrive at cabinet 1. On the cabinet 1, you see a bowl 1, and a plate 1.",
+      "action": "examine cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine cabinet 1\"}",
+      "observation": "On the cabinet 1, you see a bowl 1, and a plate 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "On the cabinet 1, you see a bowl 1, and a plate 1.",
+      "action": "go to fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to fridge 1\"}",
+      "observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "action": "go to countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 2\"}",
+      "observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "take bread 1 from countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take bread 1 from countertop 3\"}",
+      "observation": "You pick up the bread 1 from the countertop 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You pick up the bread 1 from the countertop 3.",
+      "action": "move bread 1 to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move bread 1 to countertop 3\"}",
+      "observation": "You move the bread 1 to the countertop 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "You move the bread 1 to the countertop 3.",
+      "action": "examine countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 3\"}",
+      "observation": "On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to fridge 1\"}",
+      "observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "action": "go to stoveburner 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 1\"}",
+      "observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 18,
+      "before_observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "action": "examine stoveburner 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine stoveburner 1\"}",
+      "observation": "On the stoveburner 1, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 19,
+      "before_observation": "On the stoveburner 1, you see a pot 1.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 20,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to toaster 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to toaster 1\"}",
+      "observation": "You arrive at toaster 1. On the toaster 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 21,
+      "before_observation": "You arrive at toaster 1. On the toaster 1, you see nothing.",
+      "action": "examine toaster 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine toaster 1\"}",
+      "observation": "On the toaster 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 22,
+      "before_observation": "On the toaster 1, you see nothing.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 23,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "examine countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 3\"}",
+      "observation": "On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 24,
+      "before_observation": "On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to stoveburner 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 1\"}",
+      "observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 25,
+      "before_observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 26,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to stoveburner 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 1\"}",
+      "observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 27,
+      "before_observation": "You arrive at stoveburner 1. On the stoveburner 1, you see a pot 1.",
+      "action": "go to stoveburner 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 2\"}",
+      "observation": "You arrive at stoveburner 2. On the stoveburner 2, you see a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 28,
+      "before_observation": "You arrive at stoveburner 2. On the stoveburner 2, you see a pan 1.",
+      "action": "examine stoveburner 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine stoveburner 2\"}",
+      "observation": "On the stoveburner 2, you see a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 29,
+      "before_observation": "On the stoveburner 2, you see a pan 1.",
+      "action": "take pan 1 from stoveburner 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pan 1 from stoveburner 2\"}",
+      "observation": "You pick up the pan 1 from the stoveburner 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 30,
+      "before_observation": "You pick up the pan 1 from the stoveburner 2.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 31,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to fridge 1\"}",
+      "observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 32,
+      "before_observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "action": "go to countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 2\"}",
+      "observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 33,
+      "before_observation": "You arrive at countertop 2. On the countertop 2, you see nothing.",
+      "action": "move pan 1 to countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pan 1 to countertop 2\"}",
+      "observation": "You move the pan 1 to the countertop 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 34,
+      "before_observation": "You move the pan 1 to the countertop 2.",
+      "action": "examine countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 2\"}",
+      "observation": "On the countertop 2, you see a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 35,
+      "before_observation": "On the countertop 2, you see a pan 1.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 36,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to stoveburner 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 2\"}",
+      "observation": "You arrive at stoveburner 2. On the stoveburner 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 37,
+      "before_observation": "You arrive at stoveburner 2. On the stoveburner 2, you see nothing.",
+      "action": "examine stoveburner 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine stoveburner 2\"}",
+      "observation": "On the stoveburner 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 38,
+      "before_observation": "On the stoveburner 2, you see nothing.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 39,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "action": "go to countertop 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 3\"}",
+      "observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 40,
+      "before_observation": "You arrive at countertop 3. On the countertop 3, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 2, a glassbottle 1, a houseplant 1, a lettuce 1, a papertowelroll 1, a potato 3, a potato 2, a saltshaker 2, a spatula 1, a spoon 1, a statue 2, a tomato 3, a tomato 1, and a vase 3.",
+      "action": "go to stoveburner 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 3\"}",
+      "observation": "You arrive at stoveburner 3. On the stoveburner 3, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 41,
+      "before_observation": "You arrive at stoveburner 3. On the stoveburner 3, you see a pot 1.",
+      "action": "examine stoveburner 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine stoveburner 3\"}",
+      "observation": "On the stoveburner 3, you see a pot 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 42,
+      "before_observation": "On the stoveburner 3, you see a pot 1.",
+      "action": "go to stoveburner 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to stoveburner 4\"}",
+      "observation": "You arrive at stoveburner 4. On the stoveburner 4, you see a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 43,
+      "before_observation": "You arrive at stoveburner 4. On the stoveburner 4, you see a pan 1.",
+      "action": "examine stoveburner 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine stoveburner 4\"}",
+      "observation": "On the stoveburner 4, you see a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 44,
+      "before_observation": "On the stoveburner 4, you see a pan 1.",
+      "action": "take pan 1 from stoveburner 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pan 1 from stoveburner 4\"}",
+      "observation": "You pick up the pan 1 from the stoveburner 4.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 45,
+      "before_observation": "You pick up the pan 1 from the stoveburner 4.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 46,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a mug 1.",
+      "action": "move pan 1 to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pan 1 to countertop 1\"}",
+      "observation": "You move the pan 1 to the countertop 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 47,
+      "before_observation": "You move the pan 1 to the countertop 1.",
+      "action": "examine countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine countertop 1\"}",
+      "observation": "On the countertop 1, you see a mug 1, and a pan 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 48,
+      "before_observation": "On the countertop 1, you see a mug 1, and a pan 1.",
+      "action": "go to fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to fridge 1\"}",
+      "observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 49,
+      "before_observation": "You arrive at fridge 1. The fridge 1 is open. In it, you see nothing.",
+      "action": "examine fridge 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine fridge 1\"}",
+      "observation": "The fridge 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 50,
+      "before_observation": "The fridge 1 is open. In it, you see nothing.",
+      "action": "go to cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 1\"}",
+      "observation": "You arrive at cabinet 1. On the cabinet 1, you see a bowl 1, and a plate 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to fridge 1"
+      },
+      {
+        "id": "2",
+        "label": "open fridge 1"
+      },
+      {
+        "id": "3",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "4",
+        "label": "examine countertop 1"
+      },
+      {
+        "id": "5",
+        "label": "go to countertop 2"
+      },
+      {
+        "id": "6",
+        "label": "examine countertop 2"
+      },
+      {
+        "id": "7",
+        "label": "go to cabinet 1"
+      },
+      {
+        "id": "8",
+        "label": "examine cabinet 1"
+      },
+      {
+        "id": "9",
+        "label": "go to fridge 1"
+      },
+      {
+        "id": "10",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "11",
+        "label": "go to countertop 2"
+      },
+      {
+        "id": "12",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "13",
+        "label": "take bread 1 from countertop 3"
+      },
+      {
+        "id": "14",
+        "label": "move bread 1 to countertop 3"
+      },
+      {
+        "id": "15",
+        "label": "examine countertop 3"
+      },
+      {
+        "id": "16",
+        "label": "go to fridge 1"
+      },
+      {
+        "id": "17",
+        "label": "go to stoveburner 1"
+      },
+      {
+        "id": "18",
+        "label": "examine stoveburner 1"
+      },
+      {
+        "id": "19",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "20",
+        "label": "go to toaster 1"
+      },
+      {
+        "id": "21",
+        "label": "examine toaster 1"
+      },
+      {
+        "id": "22",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "23",
+        "label": "examine countertop 3"
+      },
+      {
+        "id": "24",
+        "label": "go to stoveburner 1"
+      },
+      {
+        "id": "25",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "26",
+        "label": "go to stoveburner 1"
+      },
+      {
+        "id": "27",
+        "label": "go to stoveburner 2"
+      },
+      {
+        "id": "28",
+        "label": "examine stoveburner 2"
+      },
+      {
+        "id": "29",
+        "label": "take pan 1 from stoveburner 2"
+      },
+      {
+        "id": "30",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "31",
+        "label": "go to fridge 1"
+      },
+      {
+        "id": "32",
+        "label": "go to countertop 2"
+      },
+      {
+        "id": "33",
+        "label": "move pan 1 to countertop 2"
+      },
+      {
+        "id": "34",
+        "label": "examine countertop 2"
+      },
+      {
+        "id": "35",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "36",
+        "label": "go to stoveburner 2"
+      },
+      {
+        "id": "37",
+        "label": "examine stoveburner 2"
+      },
+      {
+        "id": "38",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "39",
+        "label": "go to countertop 3"
+      },
+      {
+        "id": "40",
+        "label": "go to stoveburner 3"
+      },
+      {
+        "id": "41",
+        "label": "examine stoveburner 3"
+      },
+      {
+        "id": "42",
+        "label": "go to stoveburner 4"
+      },
+      {
+        "id": "43",
+        "label": "examine stoveburner 4"
+      },
+      {
+        "id": "44",
+        "label": "take pan 1 from stoveburner 4"
+      },
+      {
+        "id": "45",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "46",
+        "label": "move pan 1 to countertop 1"
+      },
+      {
+        "id": "47",
+        "label": "examine countertop 1"
+      },
+      {
+        "id": "48",
+        "label": "go to fridge 1"
+      },
+      {
+        "id": "49",
+        "label": "examine fridge 1"
+      },
+      {
+        "id": "50",
+        "label": "go to cabinet 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      },
+      {
+        "source": "17",
+        "target": "18"
+      },
+      {
+        "source": "18",
+        "target": "19"
+      },
+      {
+        "source": "19",
+        "target": "20"
+      },
+      {
+        "source": "20",
+        "target": "21"
+      },
+      {
+        "source": "21",
+        "target": "22"
+      },
+      {
+        "source": "22",
+        "target": "23"
+      },
+      {
+        "source": "23",
+        "target": "24"
+      },
+      {
+        "source": "24",
+        "target": "25"
+      },
+      {
+        "source": "25",
+        "target": "26"
+      },
+      {
+        "source": "26",
+        "target": "27"
+      },
+      {
+        "source": "27",
+        "target": "28"
+      },
+      {
+        "source": "28",
+        "target": "29"
+      },
+      {
+        "source": "29",
+        "target": "30"
+      },
+      {
+        "source": "30",
+        "target": "31"
+      },
+      {
+        "source": "31",
+        "target": "32"
+      },
+      {
+        "source": "32",
+        "target": "33"
+      },
+      {
+        "source": "33",
+        "target": "34"
+      },
+      {
+        "source": "34",
+        "target": "35"
+      },
+      {
+        "source": "35",
+        "target": "36"
+      },
+      {
+        "source": "36",
+        "target": "37"
+      },
+      {
+        "source": "37",
+        "target": "38"
+      },
+      {
+        "source": "38",
+        "target": "39"
+      },
+      {
+        "source": "39",
+        "target": "40"
+      },
+      {
+        "source": "40",
+        "target": "41"
+      },
+      {
+        "source": "41",
+        "target": "42"
+      },
+      {
+        "source": "42",
+        "target": "43"
+      },
+      {
+        "source": "43",
+        "target": "44"
+      },
+      {
+        "source": "44",
+        "target": "45"
+      },
+      {
+        "source": "45",
+        "target": "46"
+      },
+      {
+        "source": "46",
+        "target": "47"
+      },
+      {
+        "source": "47",
+        "target": "48"
+      },
+      {
+        "source": "48",
+        "target": "49"
+      },
+      {
+        "source": "49",
+        "target": "50"
+      }
+    ]
+  },
+  "steps": 50,
+  "final_score": 0,
+  "success": false,
+  "terminated": false,
+  "latency_seconds": 25.156
+}

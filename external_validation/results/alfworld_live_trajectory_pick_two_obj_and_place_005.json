@@ -1,0 +1,396 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_two_obj_and_place-PepperShaker-None-Drawer-10/trial_T20190908_010306_215435/game.tw-pddl",
+  "objective": "put two peppershaker in drawer.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put two peppershaker in drawer.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put two peppershaker in drawer.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "action": "open drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open drawer 1\"}",
+      "observation": "You open the drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "You open the drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "action": "go to drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 2\"}",
+      "observation": "You arrive at drawer 2. The drawer 2 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at drawer 2. The drawer 2 is closed.",
+      "action": "open drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open drawer 2\"}",
+      "observation": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "You open the drawer 2. The drawer 2 is open. In it, you see nothing.",
+      "action": "go to drawer 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 3\"}",
+      "observation": "You arrive at drawer 3. The drawer 3 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You arrive at drawer 3. The drawer 3 is closed.",
+      "action": "open drawer 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open drawer 3\"}",
+      "observation": "You open the drawer 3. The drawer 3 is open. In it, you see a spatula 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "You open the drawer 3. The drawer 3 is open. In it, you see a spatula 2.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a cup 1, a fork 2, a mug 3, a soapbottle 3, a soapbottle 2, a spatula 1, and a spoon 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a cup 1, a fork 2, a mug 3, a soapbottle 3, a soapbottle 2, a spatula 1, and a spoon 1.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "action": "go to cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 1\"}",
+      "observation": "You arrive at cabinet 1. On the cabinet 1, you see a mug 2, and a peppershaker 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You arrive at cabinet 1. On the cabinet 1, you see a mug 2, and a peppershaker 2.",
+      "action": "take peppershaker 2 from cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take peppershaker 2 from cabinet 1\"}",
+      "observation": "You pick up the peppershaker 2 from the cabinet 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "You pick up the peppershaker 2 from the cabinet 1.",
+      "action": "go to drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 2\"}",
+      "observation": "You arrive at drawer 2. The drawer 2 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "You arrive at drawer 2. The drawer 2 is open. In it, you see nothing.",
+      "action": "move peppershaker 2 to drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move peppershaker 2 to drawer 2\"}",
+      "observation": "You move the peppershaker 2 to the drawer 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "You move the peppershaker 2 to the drawer 2.",
+      "action": "go to drawer 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 3\"}",
+      "observation": "You arrive at drawer 3. The drawer 3 is open. In it, you see a spatula 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You arrive at drawer 3. The drawer 3 is open. In it, you see a spatula 2.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a cellphone 1, and a fork 1.",
+      "action": "go to cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 2\"}",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "action": "examine cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine cabinet 2\"}",
+      "observation": "The cabinet 2 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "The cabinet 2 is closed.",
+      "action": "open cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open cabinet 2\"}",
+      "observation": "You open the cabinet 2. The cabinet 2 is open. In it, you see a peppershaker 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 18,
+      "before_observation": "You open the cabinet 2. The cabinet 2 is open. In it, you see a peppershaker 1.",
+      "action": "take peppershaker 1 from cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take peppershaker 1 from cabinet 2\"}",
+      "observation": "You pick up the peppershaker 1 from the cabinet 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 19,
+      "before_observation": "You pick up the peppershaker 1 from the cabinet 2.",
+      "action": "go to drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 2\"}",
+      "observation": "You arrive at drawer 2. The drawer 2 is open. In it, you see a peppershaker 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 20,
+      "before_observation": "You arrive at drawer 2. The drawer 2 is open. In it, you see a peppershaker 2.",
+      "action": "move peppershaker 1 to drawer 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move peppershaker 1 to drawer 2\"}",
+      "observation": "You move the peppershaker 1 to the drawer 2.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "2",
+        "label": "open drawer 1"
+      },
+      {
+        "id": "3",
+        "label": "go to drawer 2"
+      },
+      {
+        "id": "4",
+        "label": "open drawer 2"
+      },
+      {
+        "id": "5",
+        "label": "go to drawer 3"
+      },
+      {
+        "id": "6",
+        "label": "open drawer 3"
+      },
+      {
+        "id": "7",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "8",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "9",
+        "label": "go to cabinet 1"
+      },
+      {
+        "id": "10",
+        "label": "take peppershaker 2 from cabinet 1"
+      },
+      {
+        "id": "11",
+        "label": "go to drawer 2"
+      },
+      {
+        "id": "12",
+        "label": "move peppershaker 2 to drawer 2"
+      },
+      {
+        "id": "13",
+        "label": "go to drawer 3"
+      },
+      {
+        "id": "14",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "15",
+        "label": "go to cabinet 2"
+      },
+      {
+        "id": "16",
+        "label": "examine cabinet 2"
+      },
+      {
+        "id": "17",
+        "label": "open cabinet 2"
+      },
+      {
+        "id": "18",
+        "label": "take peppershaker 1 from cabinet 2"
+      },
+      {
+        "id": "19",
+        "label": "go to drawer 2"
+      },
+      {
+        "id": "20",
+        "label": "move peppershaker 1 to drawer 2"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      },
+      {
+        "source": "17",
+        "target": "18"
+      },
+      {
+        "source": "18",
+        "target": "19"
+      },
+      {
+        "source": "19",
+        "target": "20"
+      }
+    ]
+  },
+  "steps": 20,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 9.978
+}

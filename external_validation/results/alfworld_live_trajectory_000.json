@@ -1,0 +1,339 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222917_366542/game.tw-pddl",
+  "objective": "examine the alarmclock with the desklamp.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: examine the alarmclock with the desklamp.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: examine the alarmclock with the desklamp.",
+      "action": "go to desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 1\"}",
+      "observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "action": "examine desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desklamp 1\"}",
+      "observation": "On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "action": "use desklamp 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"use desklamp 1\"}",
+      "observation": "You turn on the desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You turn on the desklamp 1.",
+      "action": "go to desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 2\"}",
+      "observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "action": "examine desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desk 2\"}",
+      "observation": "On the desk 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "On the desk 2, you see a alarmclock 1.",
+      "action": "examine desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desk 2\"}",
+      "observation": "On the desk 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "On the desk 2, you see a alarmclock 1.",
+      "action": "go to desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 1\"}",
+      "observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "action": "go to desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 2\"}",
+      "observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "action": "go to desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 1\"}",
+      "observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "action": "go to bed 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desklamp 1\"}",
+      "observation": "You arrive at bed 1. On the bed 1, you see a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "You arrive at bed 1. On the bed 1, you see a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.",
+      "action": "examine bed 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desklamp 1\"}",
+      "observation": "On the bed 1, you see a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "On the bed 1, you see a book 1, a cellphone 1, a laptop 2, a laptop 1, and a pillow 1.",
+      "action": "go to desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 2\"}",
+      "observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "You arrive at desk 2. On the desk 2, you see a alarmclock 1.",
+      "action": "take alarmclock 1 from desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take alarmclock 1 from desk 2\"}",
+      "observation": "You pick up the alarmclock 1 from the desk 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You pick up the alarmclock 1 from the desk 2.",
+      "action": "examine alarmclock 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine alarmclock 1\"}",
+      "observation": "There's nothing special about alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "There's nothing special about alarmclock 1.",
+      "action": "examine desk 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine desk 2\"}",
+      "observation": "On the desk 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "On the desk 2, you see nothing.",
+      "action": "examine alarmclock 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine alarmclock 1\"}",
+      "observation": "There's nothing special about alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "There's nothing special about alarmclock 1.",
+      "action": "go to desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 1\"}",
+      "observation": "You arrive at desk 1. On the desk 1, you see a bowl 1, a desklamp 1, a mug 1, and a pencil 1.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to desk 1"
+      },
+      {
+        "id": "2",
+        "label": "examine desk 1"
+      },
+      {
+        "id": "3",
+        "label": "use desklamp 1"
+      },
+      {
+        "id": "4",
+        "label": "go to desk 2"
+      },
+      {
+        "id": "5",
+        "label": "examine desk 2"
+      },
+      {
+        "id": "6",
+        "label": "examine desk 2"
+      },
+      {
+        "id": "7",
+        "label": "go to desk 1"
+      },
+      {
+        "id": "8",
+        "label": "go to desk 2"
+      },
+      {
+        "id": "9",
+        "label": "go to desk 1"
+      },
+      {
+        "id": "10",
+        "label": "go to bed 1"
+      },
+      {
+        "id": "11",
+        "label": "examine bed 1"
+      },
+      {
+        "id": "12",
+        "label": "go to desk 2"
+      },
+      {
+        "id": "13",
+        "label": "take alarmclock 1 from desk 2"
+      },
+      {
+        "id": "14",
+        "label": "examine alarmclock 1"
+      },
+      {
+        "id": "15",
+        "label": "examine desk 2"
+      },
+      {
+        "id": "16",
+        "label": "examine alarmclock 1"
+      },
+      {
+        "id": "17",
+        "label": "go to desk 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      }
+    ]
+  },
+  "steps": 17,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 11.915
+}

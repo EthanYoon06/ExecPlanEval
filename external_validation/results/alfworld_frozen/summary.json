@@ -1,0 +1,162 @@
+{
+  "protocol": "single-shot frozen open-loop action sequence generated from the initial ALFWorld state; no replanning or action substitution",
+  "models": {
+    "gemma3:1b": {
+      "n": 30,
+      "successes": 0,
+      "success_rate": 0.0,
+      "success_rate_wilson_95_ci": [
+        0.0,
+        0.11351339317396876
+      ],
+      "mean_planned_actions": 3.7666666666666666,
+      "parse_success_rate": 0.9333333333333333,
+      "mean_admissible_action_rate": 0.07880952380952382,
+      "mean_schema_validity": 0.13095238095238096,
+      "mean_dependency_validity": 0.9333333333333333,
+      "mean_pre_execution_score": 0.5321428571428571,
+      "matched_reactive_n": 30,
+      "matched_reactive_successes": 8,
+      "matched_reactive_success_rate": 0.26666666666666666,
+      "matched_reactive_success_rate_wilson_95_ci": [
+        0.14182663319596317,
+        0.4444796169518888
+      ],
+      "paired_frozen_only_successes": 0,
+      "paired_reactive_only_successes": 8,
+      "paired_exact_mcnemar_p": 0.0078125,
+      "spearman_pre_score_with_admissible_rate": 0.8404926580900542,
+      "per_task_type": {
+        "look_at_obj_in_light": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.8,
+          "mean_admissible_action_rate": 0.27999999999999997
+        },
+        "pick_and_place_simple": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.5,
+          "mean_admissible_action_rate": 0.0
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.4,
+          "mean_admissible_action_rate": 0.0
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.5928571428571429,
+          "mean_admissible_action_rate": 0.19285714285714287
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.5,
+          "mean_admissible_action_rate": 0.0
+        },
+        "pick_two_obj_and_place": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.4,
+          "mean_admissible_action_rate": 0.0
+        }
+      },
+      "spearman_with_success": null,
+      "auroc": null
+    },
+    "qwen3:8b": {
+      "n": 30,
+      "successes": 0,
+      "success_rate": 0.0,
+      "success_rate_wilson_95_ci": [
+        0.0,
+        0.11351339317396876
+      ],
+      "mean_planned_actions": 14.966666666666667,
+      "parse_success_rate": 1.0,
+      "mean_admissible_action_rate": 0.7283068783068782,
+      "mean_schema_validity": 0.995,
+      "mean_dependency_validity": 0.8722222222222222,
+      "mean_pre_execution_score": 0.9336111111111111,
+      "matched_reactive_n": 30,
+      "matched_reactive_successes": 8,
+      "matched_reactive_success_rate": 0.26666666666666666,
+      "matched_reactive_success_rate_wilson_95_ci": [
+        0.14182663319596317,
+        0.4444796169518888
+      ],
+      "paired_frozen_only_successes": 0,
+      "paired_reactive_only_successes": 8,
+      "paired_exact_mcnemar_p": 0.0078125,
+      "spearman_pre_score_with_admissible_rate": 0.5780972446302515,
+      "per_task_type": {
+        "look_at_obj_in_light": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 1.0,
+          "mean_admissible_action_rate": 0.78
+        },
+        "pick_and_place_simple": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.9183333333333333,
+          "mean_admissible_action_rate": 0.9333333333333332
+        },
+        "pick_clean_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.85,
+          "mean_admissible_action_rate": 0.6
+        },
+        "pick_cool_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.9833333333333334,
+          "mean_admissible_action_rate": 0.5942857142857143
+        },
+        "pick_heat_then_place_in_recep": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 0.85,
+          "mean_admissible_action_rate": 0.5
+        },
+        "pick_two_obj_and_place": {
+          "n": 5,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_pre_execution_score": 1.0,
+          "mean_admissible_action_rate": 0.9622222222222222
+        }
+      },
+      "spearman_with_success": null,
+      "auroc": null
+    }
+  },
+  "task_type_counts": {
+    "look_at_obj_in_light": 10,
+    "pick_and_place_simple": 10,
+    "pick_clean_then_place_in_recep": 10,
+    "pick_cool_then_place_in_recep": 10,
+    "pick_heat_then_place_in_recep": 10,
+    "pick_two_obj_and_place": 10
+  },
+  "limitations": [
+    "Initial observations do not reveal hidden object locations, making open-loop execution deliberately difficult.",
+    "The abstract dependency checker encodes only common navigation, inventory, and appliance preconditions.",
+    "Static-score AUROC is undefined when a model has no successful frozen plans."
+  ]
+}

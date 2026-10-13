@@ -1,0 +1,32 @@
+{
+  "game": "/opt/alfworld-data/json_2.1.1/valid_train/pick_and_place_simple-ToiletPaper-None-ToiletPaperHanger-402/trial_T20190908_030828_744767/game.tw-pddl",
+  "objective": null,
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtub_bar__minus_02_dot_90_bar__plus_00_dot_67_bar__plus_02_dot_86_bar_bathtubbasin, a cabinet_bar__minus_00_dot_12_bar__plus_00_dot_36_bar__plus_04_dot_63, a cabinet_bar__minus_01_dot_03_bar__plus_00_dot_36_bar__plus_04_dot_63, a cabinet_bar__minus_01_dot_06_bar__plus_00_dot_36_bar__plus_04_dot_63, a cabinet_bar__minus_01_dot_96_bar__plus_00_dot_36_bar__plus_04_dot_63, a countertop_bar__minus_01_dot_02_bar__plus_00_dot_95_bar__plus_04_dot_88, a garbagecan_bar__minus_02_dot_20_bar_00_dot_00_bar__plus_04_dot_95, a handtowelholder_bar__minus_00_dot_07_bar__plus_01_dot_57_bar__plus_04_dot_81, a handtowelholder_bar__minus_02_dot_09_bar__plus_01_dot_54_bar__plus_05_dot_15, a shelf_bar__minus_03_dot_71_bar__plus_00_dot_53_bar__plus_00_dot_95, a sink_bar__minus_00_dot_58_bar__plus_00_dot_93_bar__plus_04_dot_87_bar_sinkbasin, a sink_bar__minus_01_dot_53_bar__plus_00_dot_93_bar__plus_04_dot_87_bar_sinkbasin, a toilet_bar__minus_00_dot_52_bar_00_dot_00_bar__plus_03_dot_22, a toiletpaperhanger_bar__minus_00_dot_07_bar__plus_01_dot_13_bar__plus_03_dot_69, a towelholder_bar__minus_00_dot_07_bar__plus_01_dot_41_bar__plus_02_dot_43, and a towelholder_bar__minus_01_dot_72_bar__plus_01_dot_21_bar__plus_01_dot_74.\n\nYour task is to: put some toiletpaper on toiletpaperhanger.",
+  "admissible_commands": [
+    "go to bathtub_bar__minus_02_dot_90_bar__plus_00_dot_67_bar__plus_02_dot_86_bar_bathtubbasin",
+    "go to cabinet_bar__minus_00_dot_12_bar__plus_00_dot_36_bar__plus_04_dot_63",
+    "go to cabinet_bar__minus_01_dot_03_bar__plus_00_dot_36_bar__plus_04_dot_63",
+    "go to cabinet_bar__minus_01_dot_06_bar__plus_00_dot_36_bar__plus_04_dot_63",
+    "go to cabinet_bar__minus_01_dot_96_bar__plus_00_dot_36_bar__plus_04_dot_63",
+    "go to countertop_bar__minus_01_dot_02_bar__plus_00_dot_95_bar__plus_04_dot_88",
+    "go to garbagecan_bar__minus_02_dot_20_bar_00_dot_00_bar__plus_04_dot_95",
+    "go to handtowelholder_bar__minus_00_dot_07_bar__plus_01_dot_57_bar__plus_04_dot_81",
+    "go to handtowelholder_bar__minus_02_dot_09_bar__plus_01_dot_54_bar__plus_05_dot_15",
+    "go to shelf_bar__minus_03_dot_71_bar__plus_00_dot_53_bar__plus_00_dot_95",
+    "go to sink_bar__minus_00_dot_58_bar__plus_00_dot_93_bar__plus_04_dot_87_bar_sinkbasin",
+    "go to sink_bar__minus_01_dot_53_bar__plus_00_dot_93_bar__plus_04_dot_87_bar_sinkbasin",
+    "go to toilet_bar__minus_00_dot_52_bar_00_dot_00_bar__plus_03_dot_22",
+    "go to toiletpaperhanger_bar__minus_00_dot_07_bar__plus_01_dot_13_bar__plus_03_dot_69",
+    "go to towelholder_bar__minus_00_dot_07_bar__plus_01_dot_41_bar__plus_02_dot_43",
+    "go to towelholder_bar__minus_01_dot_72_bar__plus_01_dot_21_bar__plus_01_dot_74",
+    "help",
+    "inventory",
+    "look"
+  ],
+  "action": "look",
+  "observation": "You are in the middle of a room. Looking quickly around you, you see nothing.",
+  "score": 0,
+  "done": false,
+  "won": false,
+  "lost": false
+}

@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "annotator_a": "Qwen3-4B",
+    "annotator_b": "Qwen3-8B",
+    "bootstrap_iterations": 2000,
+    "seed": 20260827
+  },
+  "labels": [
+    "Valid",
+    "Partially valid",
+    "Invalid"
+  ],
+  "confusion": [
+    [
+      75,
+      6,
+      11
+    ],
+    [
+      8,
+      14,
+      1
+    ],
+    [
+      0,
+      1,
+      4
+    ]
+  ],
+  "metrics": [
+    {
+      "scope": "ALL",
+      "field": "overall_validity",
+      "n": 120,
+      "agreement": 0.775,
+      "kappa": 0.47750362844702465,
+      "ci95_low": 0.3039918116683724,
+      "ci95_high": 0.6360628618693134
+    },
+    {
+      "scope": "ALL",
+      "field": "tool_selection",
+      "n": 120,
+      "agreement": 0.7583333333333333,
+      "kappa": 0.4120628484541308,
+      "ci95_low": 0.24037278002461723,
+      "ci95_high": 0.5721561969439726
+    },
+    {
+      "scope": "ALL",
+      "field": "dependency_validity",
+      "n": 120,
+      "agreement": 0.7416666666666667,
+      "kappa": 0.24574209245742107,
+      "ci95_low": 0.05672402804333942,
+      "ci95_high": 0.4233289646133684
+    },
+    {
+      "scope": "ALL",
+      "field": "executability",
+      "n": 120,
+      "agreement": 0.7416666666666667,
+      "kappa": 0.3723637590686688,
+      "ci95_low": 0.2112893872027839,
+      "ci95_high": 0.5269382391590012
+    },
+    {
+      "scope": "ALL",
+      "field": "goal_completion",
+      "n": 120,
+      "agreement": 0.6416666666666667,
+      "kappa": 0.22183682702458152,
+      "ci95_low": 0.1281373844121532,
+      "ci95_high": 0.3103448275862071
+    },
+    {
+      "scope": "ALL",
+      "field": "alternative_valid_plan",
+      "n": 120,
+      "agreement": 0.5666666666666667,
+      "kappa": 0.14073258055632065,
+      "ci95_low": -0.009316770186335517,
+      "ci95_high": 0.2955326460481099
+    },
+    {
+      "scope": "ALL",
+      "field": "primary_error_type",
+      "n": 120,
+      "agreement": 0.7416666666666667,
+      "kappa": 0.41195067973442934,
+      "ci95_low": 0.2491955666785845,
+      "ci95_high": 0.5603751465416178
+    },
+    {
+      "scope": "alfworld",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.7,
+      "kappa": 0.3650793650793649,
+      "ci95_low": 0,
+      "ci95_high": 0.7169811320754715
+    },
+    {
+      "scope": "dailylifeapis",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.8,
+      "kappa": 0.4666666666666666,
+      "ci95_low": -0.014492753623188094,
+      "ci95_high": 0.8639455782312924
+    },
+    {
+      "scope": "huggingface",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.85,
+      "kappa": 0,
+      "ci95_low": 0,
+      "ci95_high": 1
+    },
+    {
+      "scope": "multimedia",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.85,
+      "kappa": 0.2105263157894738,
+      "ci95_low": 0,
+      "ci95_high": 1
+    },
+    {
+      "scope": "webshop",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.65,
+      "kappa": 0,
+      "ci95_low": 0,
+      "ci95_high": 0
+    },
+    {
+      "scope": "wikihow",
+      "field": "overall_validity",
+      "n": 20,
+      "agreement": 0.8,
+      "kappa": 0,
+      "ci95_low": 0,
+      "ci95_high": 0
+    }
+  ],
+  "disagreements": [
+    {
+      "annotation_id": "P0002",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "The plan only performs a search action without specifying search keywords or including a click action to select items. WebShop requires concrete search keywords and later selection/click actions to complete the shopping goal. A search-only plan is at most Partially valid.",
+      "rationale_b": "计划包含必要的搜索动作，直接满足用户需求，无需额外步骤，符合WebShop基准要求。"
+    },
+    {
+      "annotation_id": "P0028",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "The plan only includes a search and click action without specifying search keywords or the target value to click. WebShop requires concrete search keywords and later selection/click actions to complete the shopping goal. A search-only plan is at most Partially valid.",
+      "rationale_b": "计划包含必要的搜索和点击动作，符合WebShop基准要求，且依赖边正确，能够完成用户目标。"
+    },
+    {
+      "annotation_id": "P0036",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "WebShop plans require concrete search keywords and later selection/click actions to complete the shopping goal. The candidate only performs a search action without specifying the necessary selection or click steps to finalize the purchase, making it incomplete for the task.",
+      "rationale_b": "计划包含必要的搜索动作以完成用户目标，且无需依赖其他步骤，符合WebShop基准中搜索关键词并完成购物目标的要求。"
+    },
+    {
+      "annotation_id": "P0037",
+      "subset": "dailylifeapis",
+      "annotator_a": "Invalid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "The candidate plan lacks concrete steps for installing Zoom, finding a recommended microphone via Google, and testing the call. The dependency chain 1→2→3 implies software management must complete before search, but the plan does not specify actual installation steps or microphone search keywords. WebShop rules require concrete search terms and selection actions, but here the search is vague. Additionally, the 'make_video_call' action requires a microphone to be properly set up, which the plan does not address.",
+      "rationale_b": "计划缺少从搜索推荐麦克风到实际测试麦克风的依赖边，无法确保搜索结果能直接用于视频通话测试，因此无法完整完成用户目标。"
+    },
+    {
+      "annotation_id": "P0038",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划正确地执行了任务：首先找到两个蜡烛并分别放入两个柜子。依赖关系确保了每个蜡烛在放入柜子前已正确获取。所有动作均符合ALFWorld规则，且没有遗漏必要步骤。",
+      "rationale_b": "候选计划中使用了 'task candle from bathtubbasin 1' 这个动作，但根据 WorFBench 的工具列表，'task' 不是有效的动作，正确的动作应为 'take' 或 'pick up'。因此，该计划无法正确执行任务。"
+    },
+    {
+      "annotation_id": "P0039",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "WebShop plans require concrete search keywords and later selection/click actions to complete the shopping goal. The candidate plan only includes search and click without specifying search terms or selection criteria, so it cannot plausibly achieve the task.",
+      "rationale_b": "计划包含必要的搜索和点击动作，符合WebShop任务要求，且依赖边正确，能够完成用户目标。"
+    },
+    {
+      "annotation_id": "P0046",
+      "subset": "dailylifeapis",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划包含所有必要动作：播放音乐、预订车辆、自动驾驶、借书、分享推文和申请工作。依赖关系正确（1→2→3, 4→5, 6→5），且每个动作在TaskBench的dailylifeapis子集中有明确对应。WebShop和ALFWorld规则已满足：车辆预订和自驾符合实际场景，图书馆借书需在线操作（borrow_book_online），推文分享通过社交网络完成。所有步骤逻辑连贯，无缺失条件或错误假设。",
+      "rationale_b": "计划缺少从 'book_car' 到 'auto_driving_to_destination' 的依赖边，且 'apply_for_job' 未明确目标职位，无法完成招聘任务。"
+    },
+    {
+      "annotation_id": "P0049",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划通过正确的依赖关系确保了 dishsponge 被正确地从 toilet 中取出并放入 toilet，符合任务要求。",
+      "rationale_b": "任务要求将 dishsponge 放入 toilet，但 'task dishsponge from toilet' 是无效动作，WorFBench 中没有 'task' 动作，应使用 'get dishsponge from' 或类似获取动作。"
+    },
+    {
+      "annotation_id": "P0055",
+      "subset": "wikihow",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划包含所有必要步骤，从切割丝带、包裹、测量、折叠到最终固定，逻辑顺序合理且无缺失依赖。",
+      "rationale_b": "计划中缺少关键步骤如测量纸张和准备底部的步骤，且依赖边1→15和7→9不成立，导致无法完成包裹盒子的任务。"
+    },
+    {
+      "annotation_id": "P0056",
+      "subset": "huggingface",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划使用了TaskBench中有效的工具：Audio Classification（音频分类）用于分析音频内容，Question Answering（问答）和Sentence Similarity（句子相似度）用于评估与目标短语的关联性，Text-to-Speech（文本转语音）用于生成响应。依赖关系确保了先进行音频分类和句子相似度计算，再生成音频响应。所有步骤符合任务要求，无缺失或错误依赖。",
+      "rationale_b": "计划缺少从音频分类到问题回答的必要依赖，且未明确如何从音频中提取命令内容，无法确保完成用户目标。"
+    },
+    {
+      "annotation_id": "P0058",
+      "subset": "dailylifeapis",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "Candidate plan lacks concrete search keywords for Uber Eats order and John Doe's legal consultation, and the dependency chain 4 → 5 implies consulting before searching, which contradicts the user's request to search for IP lawyers first.",
+      "rationale_b": "所有必要动作和依赖关系均符合TaskBench dailylifeapis子集的要求，且各步骤逻辑连贯，能完整实现用户目标。"
+    },
+    {
+      "annotation_id": "P0063",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "WebShop plans require concrete search keywords and later selection/click actions to complete the shopping goal. The candidate plan only includes a search action without specifying keywords or subsequent selection steps, making it incomplete for the task.",
+      "rationale_b": "计划包含必要的搜索和点击动作，符合WebShop基准要求，且依赖边正确，能够完成购买永久性深灰棕色含阿甘油发染剂的目标。"
+    },
+    {
+      "annotation_id": "P0067",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "The candidate plan correctly identifies the required actions: first going to desk 1 (a receptacle) to position the agent, then examining the vase with the desklamp (a valid action in WorFBench). The dependency edge 1 → 2 ensures the go to desk 1 action runs before examining, which is necessary for the task. The plan uses only valid WorFBench actions and completes the user goal without missing critical steps.",
+      "rationale_b": "计划中的动作 'examine vase with desklamp' 不是 WorFBench 中的有效工具，且无法直接完成任务。需要先找到花瓶和台灯，再进行操作。"
+    },
+    {
+      "annotation_id": "P0069",
+      "subset": "multimedia",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "The candidate plan correctly identifies the necessary steps: extracting a frame from the video (Video-to-Image), applying style transfer (Image Style Transfer), transcribing video speech (Video-to-Text), searching for relevant images (Image Search), and creating the slideshow video (Image-to-Video). The dependency edges ensure the correct order: frame extraction before style transfer, transcription before image search, and both style transfer and image search before final video creation. All steps are valid TaskBench tools for multimedia processing.",
+      "rationale_b": "计划缺少从图像风格迁移（步骤2）到图像到视频（步骤5）的直接依赖边，导致步骤5无法正确执行。此外，步骤4的图像搜索与步骤5的图像到视频之间缺乏明确的依赖关系，无法确保相关图像被正确使用。"
+    },
+    {
+      "annotation_id": "P0074",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划正确地将卷纸架放入两个不同的柜子中，符合任务要求。",
+      "rationale_b": "计划中未获取实际的厕纸，而是获取了厕纸架，无法完成任务。"
+    },
+    {
+      "annotation_id": "P0075",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划正确地从两个水槽中获取了两个皂液瓶并放入马桶，所有动作的依赖关系和执行顺序均符合ALFWorld规则。",
+      "rationale_b": "计划缺少将soapbottle从sinkbasin取出的步骤，且依赖边4 → 8不成立，因为put操作应在task完成后直接执行，无需额外移动。"
+    },
+    {
+      "annotation_id": "P0078",
+      "subset": "alfworld",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "The candidate plan correctly identifies the necessary actions: first going to the desk (desk 1) to position the agent, then looking at the alarm clock under the desklamp. The dependency edge 1 → 2 ensures the go to desk action runs before the look action, which is required for the look action to be executable. The plan does not include any unnecessary steps or missing dependencies. The action semantics align with WorFBench's requirements for ALFWorld, where the agent must physically move to the desk before performing the look action.",
+      "rationale_b": "计划缺少必要的步骤以定位并查看报警器，因为需要先打开灯才能看到报警器，但未包含打开灯的动作。"
+    },
+    {
+      "annotation_id": "P0080",
+      "subset": "huggingface",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划直接使用Document Question Answering工具，无需额外依赖，可直接处理图像文件example.jpg以提取主题信息，符合TaskBench中Image Editing和Text-to-Image工具的抽象级别要求。",
+      "rationale_b": "候选计划使用了错误的工具'Document Question Answering'，而该任务属于TaskBench的huggingface子集，应使用'Text-to-Image'工具来分析图像内容以确定主题。"
+    },
+    {
+      "annotation_id": "P0087",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "The plan only performs a search action without specifying how to select or click on the resulting items to complete the purchase. WebShop requires concrete search keywords and later selection/click actions to fully complete the shopping goal.",
+      "rationale_b": "搜索动作正确使用了关键词，完整表达了用户需求，且无需依赖其他步骤即可执行，直接完成购物目标。"
+    },
+    {
+      "annotation_id": "P0088",
+      "subset": "multimedia",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "The candidate plan lacks concrete search keywords and specific actions to locate neural network applications in autonomous vehicles. A valid plan must include explicit search terms (e.g., 'neural networks in autonomous vehicles') and subsequent steps to analyze results, but the plan only specifies generic actions without necessary inputs or execution details.",
+      "rationale_b": "计划缺少必要的依赖边以确保工具执行顺序，且未明确指定具体搜索关键词或目标工具，无法有效完成用户任务。"
+    },
+    {
+      "annotation_id": "P0089",
+      "subset": "wikihow",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划包含所有必要步骤，从准备面糊到最终组装，每一步都逻辑连贯且符合蓝牛仔蛋糕制作流程。",
+      "rationale_b": "步骤 4 'Prepare your cake shape' 依赖于步骤 3 'Grab the cake mold and pour in the mixture'，但步骤 3 本身依赖于步骤 2 'Make the cake batter following the directions on the box'，而步骤 2 依赖于步骤 1 'Prepare the cake mix according to the package instructions'。然而，步骤 4 在步骤 3 之前执行，导致依赖关系错误。"
+    },
+    {
+      "annotation_id": "P0092",
+      "subset": "multimedia",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划使用了正确的工具链：Image Downloader 从URL下载图片，Video-to-Image 提取视频帧作为静态图片，然后 Image-to-: 通过依赖边确保先下载图片和提取帧，再将两者转换为视频。所有步骤都符合多媒体处理流程，且没有缺失关键依赖或步骤。",
+      "rationale_b": "计划缺少从1到2的依赖边，导致视频到图像的步骤无法正确执行，无法确保图像和视频帧的同步处理。"
+    },
+    {
+      "annotation_id": "P0094",
+      "subset": "huggingface",
+      "annotator_a": "Valid",
+      "annotator_b": "Partially valid",
+      "rationale_a": "该计划通过Audio-to-Audio增强音频质量，然后使用Audio Classification识别内容，最后用Conversational生成响应，符合用户要求的两步流程：先增强质量再解码指令。所有工具在TaskBench的Hugging Face子集下有效且无依赖冲突。",
+      "rationale_b": "计划缺少从增强音频到对话生成的直接依赖边，无法确保增强后的音频被正确用于后续的指令解析和对话生成。"
+    },
+    {
+      "annotation_id": "P0104",
+      "subset": "wikihow",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划正确地按照SQL Server 2005安装流程的顺序执行了所有必要步骤，包括CD插入、操作系统选择、安装向导、许可协议接受、版本选择、注册信息填写、错误报告设置、SQL Server Management Studio安装、认证模式选择、排序规则设置、DotNetNuke安装、SSMS登录和数据库创建。所有动作均符合WorFBench wikihow子集的规范，且依赖关系合理，无缺失或错误步骤。",
+      "rationale_b": "计划缺少关键步骤如安装SQL Server本身，而仅安装了SQL Server Management Studio，无法完成安装SQL Server 2005的完整目标。"
+    },
+    {
+      "annotation_id": "P0110",
+      "subset": "wikihow",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划包含所有必要步骤，从准备材料到最终干燥，每个步骤逻辑连贯且符合实际操作流程。",
+      "rationale_b": "计划缺少关键步骤 'Pour your bleach mixture over your item of clothing.' 和 'Peel the stencil or design off of the shirt.'，这些步骤是完成漂白任务的必要条件，且依赖关系未正确建立。"
+    },
+    {
+      "annotation_id": "P0118",
+      "subset": "dailylifeapis",
+      "annotator_a": "Valid",
+      "annotator_b": "Invalid",
+      "rationale_a": "该计划直接使用auto_driving_to_destination工具，无需额外依赖，可直接完成从当前位置到123 Main Street的驾驶任务，符合用户'快速到达目的地'的核心需求。",
+      "rationale_b": "计划缺少必要的依赖边，例如准备车辆所需的步骤（如启动汽车、检查油量等），无法确保任务完整执行。"
+    },
+    {
+      "annotation_id": "P0119",
+      "subset": "webshop",
+      "annotator_a": "Partially valid",
+      "annotator_b": "Valid",
+      "rationale_a": "WebShop plans require concrete search keywords and later selection/click actions to complete the shopping goal. The candidate only includes a search action without any subsequent selection or click steps to finalize the purchase, making it incomplete for the task.",
+      "rationale_b": "计划使用正确的搜索工具并包含必要的搜索关键词，直接完成用户目标，无需额外依赖或步骤。"
+    }
+  ]
+}

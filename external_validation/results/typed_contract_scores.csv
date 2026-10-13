@@ -1,0 +1,41 @@
+﻿task_id,subset,overall_validity,ordinal_label,binary_label,graph_validity,catalog_validity,edge_type_compatibility,typed_contract_score,edge_count
+taskbench_huggingface_11183993,huggingface,Invalid,0,0,1.0,1.0,0.6666666666666666,0.8888888888888888,3
+taskbench_huggingface_12255767,huggingface,Partially valid,1,0,1.0,1.0,1.0,1.0,4
+taskbench_huggingface_12669279,huggingface,Valid,2,1,1.0,1.0,0.0,0.6666666666666666,1
+taskbench_huggingface_13391194,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_huggingface_13414917,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_16692754,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,3
+taskbench_huggingface_18782828,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_19199406,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_huggingface_21812478,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_huggingface_22364747,huggingface,Invalid,0,0,1.0,1.0,0.8,0.9333333333333332,5
+taskbench_huggingface_23546836,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_25591917,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_26330183,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,3
+taskbench_huggingface_29118563,huggingface,Partially valid,1,0,1.0,1.0,1.0,1.0,3
+taskbench_huggingface_30657416,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_57762884,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,3
+taskbench_huggingface_60763716,huggingface,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_huggingface_72411211,huggingface,Invalid,0,0,1.0,1.0,1.0,1.0,2
+taskbench_huggingface_84997443,huggingface,Partially valid,1,0,1.0,1.0,1.0,1.0,3
+taskbench_huggingface_88193260,huggingface,Valid,2,1,1.0,1.0,0.75,0.9166666666666666,4
+taskbench_multimedia_10277798,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,3
+taskbench_multimedia_13546495,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_multimedia_14067855,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_multimedia_14392782,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_15961119,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,1
+taskbench_multimedia_17457368,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_18545611,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,1
+taskbench_multimedia_19460308,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,3
+taskbench_multimedia_20323840,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,4
+taskbench_multimedia_22238045,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_multimedia_23872851,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_multimedia_25676656,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_26269578,multimedia,Partially valid,1,0,1.0,1.0,0.6666666666666666,0.8888888888888888,3
+taskbench_multimedia_28956495,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_29348560,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_30805548,multimedia,Partially valid,1,0,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_30837315,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,2
+taskbench_multimedia_32474546,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0
+taskbench_multimedia_57301360,multimedia,Partially valid,1,0,1.0,1.0,1.0,1.0,6
+taskbench_multimedia_82856941,multimedia,Valid,2,1,1.0,1.0,1.0,1.0,0

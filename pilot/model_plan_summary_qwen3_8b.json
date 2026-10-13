@@ -1,0 +1,7 @@
+{
+  "plans": 30,
+  "parse_success_rate": 1.0,
+  "execution_success_rate": 1.0,
+  "mean_latency_seconds": 3.956033333333333,
+  "metric_analysis": {}
+}

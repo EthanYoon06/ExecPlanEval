@@ -1,0 +1,5112 @@
+[
+  {
+    "task_id": "pilot_01",
+    "domain": "travel",
+    "instruction": "Prepare a trip summary",
+    "initial_state": [
+      "profile_ready"
+    ],
+    "goal": [
+      "trip_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_travel_a",
+          "preconditions": [
+            "profile_ready"
+          ],
+          "effects": [
+            "travel_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_travel_b",
+          "preconditions": [
+            "profile_ready"
+          ],
+          "effects": [
+            "travel_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_travel",
+          "preconditions": [
+            "travel_evidence_a",
+            "travel_evidence_b"
+          ],
+          "effects": [
+            "travel_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_travel",
+          "preconditions": [
+            "travel_combined"
+          ],
+          "effects": [
+            "trip_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_travel_a",
+        "preconditions": [
+          "profile_ready"
+        ],
+        "effects": [
+          "travel_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_travel_b",
+        "preconditions": [
+          "profile_ready"
+        ],
+        "effects": [
+          "travel_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_travel",
+        "preconditions": [
+          "travel_evidence_a",
+          "travel_evidence_b"
+        ],
+        "effects": [
+          "travel_combined"
+        ]
+      },
+      {
+        "name": "finalize_travel",
+        "preconditions": [
+          "travel_combined"
+        ],
+        "effects": [
+          "trip_ready"
+        ]
+      },
+      {
+        "name": "retrieve_travel_primary",
+        "preconditions": [
+          "profile_ready"
+        ],
+        "effects": [
+          "travel_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_travel",
+        "preconditions": [
+          "travel_combined"
+        ],
+        "effects": [
+          "travel_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_travel_a",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_travel_b",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_travel_a",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_travel_b",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_travel_primary",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_travel_b",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_travel_a",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_travel_b",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "travel_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_travel_a",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_travel_a",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_travel_b",
+              "preconditions": [
+                "profile_ready"
+              ],
+              "effects": [
+                "travel_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_travel",
+              "preconditions": [
+                "travel_evidence_a",
+                "travel_evidence_b"
+              ],
+              "effects": [
+                "travel_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_travel",
+              "preconditions": [
+                "travel_combined"
+              ],
+              "effects": [
+                "trip_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_02",
+    "domain": "weather",
+    "instruction": "Create a weather-aware reminder",
+    "initial_state": [
+      "location_known"
+    ],
+    "goal": [
+      "reminder_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_weather_a",
+          "preconditions": [
+            "location_known"
+          ],
+          "effects": [
+            "weather_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_weather_b",
+          "preconditions": [
+            "location_known"
+          ],
+          "effects": [
+            "weather_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_weather",
+          "preconditions": [
+            "weather_evidence_a",
+            "weather_evidence_b"
+          ],
+          "effects": [
+            "weather_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_weather",
+          "preconditions": [
+            "weather_combined"
+          ],
+          "effects": [
+            "reminder_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_weather_a",
+        "preconditions": [
+          "location_known"
+        ],
+        "effects": [
+          "weather_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_weather_b",
+        "preconditions": [
+          "location_known"
+        ],
+        "effects": [
+          "weather_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_weather",
+        "preconditions": [
+          "weather_evidence_a",
+          "weather_evidence_b"
+        ],
+        "effects": [
+          "weather_combined"
+        ]
+      },
+      {
+        "name": "finalize_weather",
+        "preconditions": [
+          "weather_combined"
+        ],
+        "effects": [
+          "reminder_ready"
+        ]
+      },
+      {
+        "name": "retrieve_weather_primary",
+        "preconditions": [
+          "location_known"
+        ],
+        "effects": [
+          "weather_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_weather",
+        "preconditions": [
+          "weather_combined"
+        ],
+        "effects": [
+          "weather_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_weather_a",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_weather_b",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_weather_a",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_weather_b",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_weather_primary",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_weather_b",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_weather_a",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_weather_b",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "weather_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_weather_a",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_weather_a",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_weather_b",
+              "preconditions": [
+                "location_known"
+              ],
+              "effects": [
+                "weather_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_weather",
+              "preconditions": [
+                "weather_evidence_a",
+                "weather_evidence_b"
+              ],
+              "effects": [
+                "weather_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_weather",
+              "preconditions": [
+                "weather_combined"
+              ],
+              "effects": [
+                "reminder_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_03",
+    "domain": "shopping",
+    "instruction": "Prepare a purchase recommendation",
+    "initial_state": [
+      "request_known"
+    ],
+    "goal": [
+      "purchase_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_shopping_a",
+          "preconditions": [
+            "request_known"
+          ],
+          "effects": [
+            "shopping_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_shopping_b",
+          "preconditions": [
+            "request_known"
+          ],
+          "effects": [
+            "shopping_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_shopping",
+          "preconditions": [
+            "shopping_evidence_a",
+            "shopping_evidence_b"
+          ],
+          "effects": [
+            "shopping_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_shopping",
+          "preconditions": [
+            "shopping_combined"
+          ],
+          "effects": [
+            "purchase_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_shopping_a",
+        "preconditions": [
+          "request_known"
+        ],
+        "effects": [
+          "shopping_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_shopping_b",
+        "preconditions": [
+          "request_known"
+        ],
+        "effects": [
+          "shopping_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_shopping",
+        "preconditions": [
+          "shopping_evidence_a",
+          "shopping_evidence_b"
+        ],
+        "effects": [
+          "shopping_combined"
+        ]
+      },
+      {
+        "name": "finalize_shopping",
+        "preconditions": [
+          "shopping_combined"
+        ],
+        "effects": [
+          "purchase_ready"
+        ]
+      },
+      {
+        "name": "retrieve_shopping_primary",
+        "preconditions": [
+          "request_known"
+        ],
+        "effects": [
+          "shopping_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_shopping",
+        "preconditions": [
+          "shopping_combined"
+        ],
+        "effects": [
+          "shopping_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_shopping_a",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_shopping_b",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_shopping_a",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_shopping_b",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_shopping_primary",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_shopping_b",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_shopping_a",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_shopping_b",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "shopping_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_shopping_a",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_shopping_a",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_shopping_b",
+              "preconditions": [
+                "request_known"
+              ],
+              "effects": [
+                "shopping_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_shopping",
+              "preconditions": [
+                "shopping_evidence_a",
+                "shopping_evidence_b"
+              ],
+              "effects": [
+                "shopping_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_shopping",
+              "preconditions": [
+                "shopping_combined"
+              ],
+              "effects": [
+                "purchase_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_04",
+    "domain": "media",
+    "instruction": "Create an accessible media summary",
+    "initial_state": [
+      "media_available"
+    ],
+    "goal": [
+      "media_summary_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_media_a",
+          "preconditions": [
+            "media_available"
+          ],
+          "effects": [
+            "media_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_media_b",
+          "preconditions": [
+            "media_available"
+          ],
+          "effects": [
+            "media_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_media",
+          "preconditions": [
+            "media_evidence_a",
+            "media_evidence_b"
+          ],
+          "effects": [
+            "media_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_media",
+          "preconditions": [
+            "media_combined"
+          ],
+          "effects": [
+            "media_summary_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_media_a",
+        "preconditions": [
+          "media_available"
+        ],
+        "effects": [
+          "media_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_media_b",
+        "preconditions": [
+          "media_available"
+        ],
+        "effects": [
+          "media_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_media",
+        "preconditions": [
+          "media_evidence_a",
+          "media_evidence_b"
+        ],
+        "effects": [
+          "media_combined"
+        ]
+      },
+      {
+        "name": "finalize_media",
+        "preconditions": [
+          "media_combined"
+        ],
+        "effects": [
+          "media_summary_ready"
+        ]
+      },
+      {
+        "name": "retrieve_media_primary",
+        "preconditions": [
+          "media_available"
+        ],
+        "effects": [
+          "media_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_media",
+        "preconditions": [
+          "media_combined"
+        ],
+        "effects": [
+          "media_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_media_a",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_media_b",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_media_a",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_media_b",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_media_primary",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_media_b",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_media_a",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_media_b",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_media_a",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_media_a",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_media_b",
+              "preconditions": [
+                "media_available"
+              ],
+              "effects": [
+                "media_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_media",
+              "preconditions": [
+                "media_evidence_a",
+                "media_evidence_b"
+              ],
+              "effects": [
+                "media_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_media",
+              "preconditions": [
+                "media_combined"
+              ],
+              "effects": [
+                "media_summary_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_05",
+    "domain": "document",
+    "instruction": "Translate and archive a document",
+    "initial_state": [
+      "document_available"
+    ],
+    "goal": [
+      "document_archived"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_document_a",
+          "preconditions": [
+            "document_available"
+          ],
+          "effects": [
+            "document_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_document_b",
+          "preconditions": [
+            "document_available"
+          ],
+          "effects": [
+            "document_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_document",
+          "preconditions": [
+            "document_evidence_a",
+            "document_evidence_b"
+          ],
+          "effects": [
+            "document_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_document",
+          "preconditions": [
+            "document_combined"
+          ],
+          "effects": [
+            "document_archived"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_document_a",
+        "preconditions": [
+          "document_available"
+        ],
+        "effects": [
+          "document_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_document_b",
+        "preconditions": [
+          "document_available"
+        ],
+        "effects": [
+          "document_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_document",
+        "preconditions": [
+          "document_evidence_a",
+          "document_evidence_b"
+        ],
+        "effects": [
+          "document_combined"
+        ]
+      },
+      {
+        "name": "finalize_document",
+        "preconditions": [
+          "document_combined"
+        ],
+        "effects": [
+          "document_archived"
+        ]
+      },
+      {
+        "name": "retrieve_document_primary",
+        "preconditions": [
+          "document_available"
+        ],
+        "effects": [
+          "document_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_document",
+        "preconditions": [
+          "document_combined"
+        ],
+        "effects": [
+          "document_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_document_a",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_document_b",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_document_a",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_document_b",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_document_primary",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_document_b",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_document_a",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_document_b",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_document_a",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_document_a",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_document_b",
+              "preconditions": [
+                "document_available"
+              ],
+              "effects": [
+                "document_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_document",
+              "preconditions": [
+                "document_evidence_a",
+                "document_evidence_b"
+              ],
+              "effects": [
+                "document_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_document",
+              "preconditions": [
+                "document_combined"
+              ],
+              "effects": [
+                "document_archived"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_06",
+    "domain": "meeting",
+    "instruction": "Schedule and notify meeting participants",
+    "initial_state": [
+      "participants_known"
+    ],
+    "goal": [
+      "meeting_notified"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_meeting_a",
+          "preconditions": [
+            "participants_known"
+          ],
+          "effects": [
+            "meeting_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_meeting_b",
+          "preconditions": [
+            "participants_known"
+          ],
+          "effects": [
+            "meeting_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_meeting",
+          "preconditions": [
+            "meeting_evidence_a",
+            "meeting_evidence_b"
+          ],
+          "effects": [
+            "meeting_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_meeting",
+          "preconditions": [
+            "meeting_combined"
+          ],
+          "effects": [
+            "meeting_notified"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_meeting_a",
+        "preconditions": [
+          "participants_known"
+        ],
+        "effects": [
+          "meeting_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_meeting_b",
+        "preconditions": [
+          "participants_known"
+        ],
+        "effects": [
+          "meeting_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_meeting",
+        "preconditions": [
+          "meeting_evidence_a",
+          "meeting_evidence_b"
+        ],
+        "effects": [
+          "meeting_combined"
+        ]
+      },
+      {
+        "name": "finalize_meeting",
+        "preconditions": [
+          "meeting_combined"
+        ],
+        "effects": [
+          "meeting_notified"
+        ]
+      },
+      {
+        "name": "retrieve_meeting_primary",
+        "preconditions": [
+          "participants_known"
+        ],
+        "effects": [
+          "meeting_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_meeting",
+        "preconditions": [
+          "meeting_combined"
+        ],
+        "effects": [
+          "meeting_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_meeting_a",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_meeting_b",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_meeting_a",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_meeting_b",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_meeting_primary",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_meeting_b",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_meeting_a",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_meeting_b",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_meeting_a",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_meeting_a",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_meeting_b",
+              "preconditions": [
+                "participants_known"
+              ],
+              "effects": [
+                "meeting_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_meeting",
+              "preconditions": [
+                "meeting_evidence_a",
+                "meeting_evidence_b"
+              ],
+              "effects": [
+                "meeting_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_meeting",
+              "preconditions": [
+                "meeting_combined"
+              ],
+              "effects": [
+                "meeting_notified"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_07",
+    "domain": "finance",
+    "instruction": "Prepare a verified expense report",
+    "initial_state": [
+      "receipts_available"
+    ],
+    "goal": [
+      "expense_report_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_finance_a",
+          "preconditions": [
+            "receipts_available"
+          ],
+          "effects": [
+            "finance_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_finance_b",
+          "preconditions": [
+            "receipts_available"
+          ],
+          "effects": [
+            "finance_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_finance",
+          "preconditions": [
+            "finance_evidence_a",
+            "finance_evidence_b"
+          ],
+          "effects": [
+            "finance_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_finance",
+          "preconditions": [
+            "finance_combined"
+          ],
+          "effects": [
+            "expense_report_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_finance_a",
+        "preconditions": [
+          "receipts_available"
+        ],
+        "effects": [
+          "finance_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_finance_b",
+        "preconditions": [
+          "receipts_available"
+        ],
+        "effects": [
+          "finance_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_finance",
+        "preconditions": [
+          "finance_evidence_a",
+          "finance_evidence_b"
+        ],
+        "effects": [
+          "finance_combined"
+        ]
+      },
+      {
+        "name": "finalize_finance",
+        "preconditions": [
+          "finance_combined"
+        ],
+        "effects": [
+          "expense_report_ready"
+        ]
+      },
+      {
+        "name": "retrieve_finance_primary",
+        "preconditions": [
+          "receipts_available"
+        ],
+        "effects": [
+          "finance_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_finance",
+        "preconditions": [
+          "finance_combined"
+        ],
+        "effects": [
+          "finance_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_finance_a",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_finance_b",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_finance_a",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_finance_b",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_finance_primary",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_finance_b",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_finance_a",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_finance_b",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "finance_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_finance_a",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_finance_a",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_finance_b",
+              "preconditions": [
+                "receipts_available"
+              ],
+              "effects": [
+                "finance_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_finance",
+              "preconditions": [
+                "finance_evidence_a",
+                "finance_evidence_b"
+              ],
+              "effects": [
+                "finance_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_finance",
+              "preconditions": [
+                "finance_combined"
+              ],
+              "effects": [
+                "expense_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_08",
+    "domain": "support",
+    "instruction": "Resolve and document a support ticket",
+    "initial_state": [
+      "ticket_open"
+    ],
+    "goal": [
+      "ticket_resolved"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_support_a",
+          "preconditions": [
+            "ticket_open"
+          ],
+          "effects": [
+            "support_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_support_b",
+          "preconditions": [
+            "ticket_open"
+          ],
+          "effects": [
+            "support_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_support",
+          "preconditions": [
+            "support_evidence_a",
+            "support_evidence_b"
+          ],
+          "effects": [
+            "support_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_support",
+          "preconditions": [
+            "support_combined"
+          ],
+          "effects": [
+            "ticket_resolved"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_support_a",
+        "preconditions": [
+          "ticket_open"
+        ],
+        "effects": [
+          "support_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_support_b",
+        "preconditions": [
+          "ticket_open"
+        ],
+        "effects": [
+          "support_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_support",
+        "preconditions": [
+          "support_evidence_a",
+          "support_evidence_b"
+        ],
+        "effects": [
+          "support_combined"
+        ]
+      },
+      {
+        "name": "finalize_support",
+        "preconditions": [
+          "support_combined"
+        ],
+        "effects": [
+          "ticket_resolved"
+        ]
+      },
+      {
+        "name": "retrieve_support_primary",
+        "preconditions": [
+          "ticket_open"
+        ],
+        "effects": [
+          "support_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_support",
+        "preconditions": [
+          "support_combined"
+        ],
+        "effects": [
+          "support_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_support_a",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_support_b",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_support_a",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_support_b",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_support_primary",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_support_b",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_support_a",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_support_b",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "support_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_support_a",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_support_a",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_support_b",
+              "preconditions": [
+                "ticket_open"
+              ],
+              "effects": [
+                "support_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_support",
+              "preconditions": [
+                "support_evidence_a",
+                "support_evidence_b"
+              ],
+              "effects": [
+                "support_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_support",
+              "preconditions": [
+                "support_combined"
+              ],
+              "effects": [
+                "ticket_resolved"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_09",
+    "domain": "research",
+    "instruction": "Collect evidence and prepare a research note",
+    "initial_state": [
+      "question_known"
+    ],
+    "goal": [
+      "research_note_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_research_a",
+          "preconditions": [
+            "question_known"
+          ],
+          "effects": [
+            "research_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_research_b",
+          "preconditions": [
+            "question_known"
+          ],
+          "effects": [
+            "research_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_research",
+          "preconditions": [
+            "research_evidence_a",
+            "research_evidence_b"
+          ],
+          "effects": [
+            "research_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_research",
+          "preconditions": [
+            "research_combined"
+          ],
+          "effects": [
+            "research_note_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_research_a",
+        "preconditions": [
+          "question_known"
+        ],
+        "effects": [
+          "research_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_research_b",
+        "preconditions": [
+          "question_known"
+        ],
+        "effects": [
+          "research_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_research",
+        "preconditions": [
+          "research_evidence_a",
+          "research_evidence_b"
+        ],
+        "effects": [
+          "research_combined"
+        ]
+      },
+      {
+        "name": "finalize_research",
+        "preconditions": [
+          "research_combined"
+        ],
+        "effects": [
+          "research_note_ready"
+        ]
+      },
+      {
+        "name": "retrieve_research_primary",
+        "preconditions": [
+          "question_known"
+        ],
+        "effects": [
+          "research_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_research",
+        "preconditions": [
+          "research_combined"
+        ],
+        "effects": [
+          "research_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_research_a",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_research_b",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_research_a",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_research_b",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_research_primary",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_research_b",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_research_a",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_research_b",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_research_a",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_research_a",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_research_b",
+              "preconditions": [
+                "question_known"
+              ],
+              "effects": [
+                "research_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_research",
+              "preconditions": [
+                "research_evidence_a",
+                "research_evidence_b"
+              ],
+              "effects": [
+                "research_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_research",
+              "preconditions": [
+                "research_combined"
+              ],
+              "effects": [
+                "research_note_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "task_id": "pilot_10",
+    "domain": "security",
+    "instruction": "Investigate and report a security alert",
+    "initial_state": [
+      "alert_open"
+    ],
+    "goal": [
+      "security_report_ready"
+    ],
+    "reference_plan": {
+      "nodes": [
+        {
+          "id": "n1",
+          "tool": "collect_security_a",
+          "preconditions": [
+            "alert_open"
+          ],
+          "effects": [
+            "security_evidence_a"
+          ]
+        },
+        {
+          "id": "n2",
+          "tool": "collect_security_b",
+          "preconditions": [
+            "alert_open"
+          ],
+          "effects": [
+            "security_evidence_b"
+          ]
+        },
+        {
+          "id": "n3",
+          "tool": "combine_security",
+          "preconditions": [
+            "security_evidence_a",
+            "security_evidence_b"
+          ],
+          "effects": [
+            "security_combined"
+          ]
+        },
+        {
+          "id": "n4",
+          "tool": "finalize_security",
+          "preconditions": [
+            "security_combined"
+          ],
+          "effects": [
+            "security_report_ready"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source": "n1",
+          "target": "n3"
+        },
+        {
+          "source": "n2",
+          "target": "n3"
+        },
+        {
+          "source": "n3",
+          "target": "n4"
+        }
+      ]
+    },
+    "tool_catalog": [
+      {
+        "name": "collect_security_a",
+        "preconditions": [
+          "alert_open"
+        ],
+        "effects": [
+          "security_evidence_a"
+        ]
+      },
+      {
+        "name": "collect_security_b",
+        "preconditions": [
+          "alert_open"
+        ],
+        "effects": [
+          "security_evidence_b"
+        ]
+      },
+      {
+        "name": "combine_security",
+        "preconditions": [
+          "security_evidence_a",
+          "security_evidence_b"
+        ],
+        "effects": [
+          "security_combined"
+        ]
+      },
+      {
+        "name": "finalize_security",
+        "preconditions": [
+          "security_combined"
+        ],
+        "effects": [
+          "security_report_ready"
+        ]
+      },
+      {
+        "name": "retrieve_security_primary",
+        "preconditions": [
+          "alert_open"
+        ],
+        "effects": [
+          "security_evidence_a"
+        ]
+      },
+      {
+        "name": "audit_security",
+        "preconditions": [
+          "security_combined"
+        ],
+        "effects": [
+          "security_audited"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "variant": "reference",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_security_a",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_security_b",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_serialization",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_security_a",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_security_b",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n1",
+              "target": "n2"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_equivalent_tool",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "retrieve_security_primary",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_security_b",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "valid_redundant_audit",
+        "expected_valid": true,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_security_a",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_security_b",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            },
+            {
+              "id": "n5",
+              "tool": "audit_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_audited"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            },
+            {
+              "source": "n3",
+              "target": "n5"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_missing_branch",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_security_a",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n1",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      },
+      {
+        "variant": "invalid_reversed_dependency",
+        "expected_valid": false,
+        "plan": {
+          "nodes": [
+            {
+              "id": "n1",
+              "tool": "collect_security_a",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_a"
+              ]
+            },
+            {
+              "id": "n2",
+              "tool": "collect_security_b",
+              "preconditions": [
+                "alert_open"
+              ],
+              "effects": [
+                "security_evidence_b"
+              ]
+            },
+            {
+              "id": "n3",
+              "tool": "combine_security",
+              "preconditions": [
+                "security_evidence_a",
+                "security_evidence_b"
+              ],
+              "effects": [
+                "security_combined"
+              ]
+            },
+            {
+              "id": "n4",
+              "tool": "finalize_security",
+              "preconditions": [
+                "security_combined"
+              ],
+              "effects": [
+                "security_report_ready"
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "n3",
+              "target": "n1"
+            },
+            {
+              "source": "n2",
+              "target": "n3"
+            },
+            {
+              "source": "n3",
+              "target": "n4"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

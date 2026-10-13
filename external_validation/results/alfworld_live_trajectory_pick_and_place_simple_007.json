@@ -1,0 +1,130 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154326_823501/game.tw-pddl",
+  "objective": "put a peppershaker in drawer.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a peppershaker in drawer.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: put a peppershaker in drawer.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "action": "open drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open drawer 1\"}",
+      "observation": "You open the drawer 1. The drawer 1 is open. In it, you see a knife 1, and a saltshaker 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "You open the drawer 1. The drawer 1 is open. In it, you see a knife 1, and a saltshaker 2.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a egg 3, a peppershaker 1, and a tomato 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a egg 3, a peppershaker 1, and a tomato 1.",
+      "action": "take peppershaker 1 from countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take peppershaker 1 from countertop 1\"}",
+      "observation": "You pick up the peppershaker 1 from the countertop 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "You pick up the peppershaker 1 from the countertop 1.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a knife 1, and a saltshaker 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see a knife 1, and a saltshaker 2.",
+      "action": "move peppershaker 1 to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move peppershaker 1 to drawer 1\"}",
+      "observation": "You move the peppershaker 1 to the drawer 1.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "2",
+        "label": "open drawer 1"
+      },
+      {
+        "id": "3",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "4",
+        "label": "take peppershaker 1 from countertop 1"
+      },
+      {
+        "id": "5",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "6",
+        "label": "move peppershaker 1 to drawer 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      }
+    ]
+  },
+  "steps": 6,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 4.306
+}

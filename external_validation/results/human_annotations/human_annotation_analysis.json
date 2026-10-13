@@ -1,0 +1,1061 @@
+{
+  "generated_at": "2026-08-27T11:49:00.318Z",
+  "input_files": {
+    "A": "C:\\Users\\YKJ\\Documents\\New project 2\\execplaneval\\external_validation\\results\\human_annotations\\raw\\English_Annotation_Table_A_annotated.xlsx",
+    "B": "C:\\Users\\YKJ\\Documents\\New project 2\\execplaneval\\external_validation\\results\\human_annotations\\raw\\English_Annotation_Table_B_annotated.xlsx"
+  },
+  "quality": {
+    "A": {
+      "row_count": 120,
+      "unique_annotation_ids": 120,
+      "missing_by_field": {
+        "overall_validity": 0,
+        "tool_selection": 0,
+        "dependency_validity": 0,
+        "executability": 0,
+        "goal_completion": 0,
+        "alternative_valid_plan": 0,
+        "primary_error_type": 0,
+        "rationale": 0,
+        "annotator_id": 0
+      },
+      "annotator_ids": [
+        "A"
+      ]
+    },
+    "B": {
+      "row_count": 120,
+      "unique_annotation_ids": 120,
+      "missing_by_field": {
+        "overall_validity": 0,
+        "tool_selection": 0,
+        "dependency_validity": 0,
+        "executability": 0,
+        "goal_completion": 0,
+        "alternative_valid_plan": 0,
+        "primary_error_type": 0,
+        "rationale": 0,
+        "annotator_id": 0
+      },
+      "annotator_ids": [
+        "B"
+      ]
+    }
+  },
+  "alignment": {
+    "same_order": true,
+    "task_ids_same_order": true
+  },
+  "agreement": {
+    "overall_validity": {
+      "n": 120,
+      "agree": 91,
+      "observed_agreement": 0.7583333333333333,
+      "expected_agreement": 0.47944444444444445,
+      "kappa": 0.535752401280683,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.40872135994087194,
+        "upper_95": 0.6666666666666665
+      },
+      "distribution_A": {
+        "Invalid": 16,
+        "Partially valid": 32,
+        "Valid": 72
+      },
+      "distribution_B": {
+        "Invalid": 26,
+        "Partially valid": 7,
+        "Valid": 87
+      }
+    },
+    "tool_selection": {
+      "n": 120,
+      "agree": 107,
+      "observed_agreement": 0.8916666666666667,
+      "expected_agreement": 0.6103472222222223,
+      "kappa": 0.7219746925681698,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.6057818659658346,
+        "upper_95": 0.8447032723239045
+      },
+      "distribution_A": {
+        "Correct": 91,
+        "Incorrect": 15,
+        "Partially correct": 14
+      },
+      "distribution_B": {
+        "Correct": 92,
+        "Incorrect": 25,
+        "Partially correct": 3
+      }
+    },
+    "dependency_validity": {
+      "n": 120,
+      "agree": 104,
+      "observed_agreement": 0.8666666666666667,
+      "expected_agreement": 0.7631944444444444,
+      "kappa": 0.4369501466275662,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.21363040629095628,
+        "upper_95": 0.6527331189710615
+      },
+      "distribution_A": {
+        "Correct": 98,
+        "Incorrect dependencies": 21,
+        "Missing dependencies": 1
+      },
+      "distribution_B": {
+        "Correct": 110,
+        "Incorrect dependencies": 10
+      }
+    },
+    "executability": {
+      "n": 120,
+      "agree": 109,
+      "observed_agreement": 0.9083333333333333,
+      "expected_agreement": 0.6053472222222223,
+      "kappa": 0.7677283125109977,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.6396396396396395,
+        "upper_95": 0.8811488940244304
+      },
+      "distribution_A": {
+        "Executable": 90,
+        "Not executable": 19,
+        "Uncertain": 11
+      },
+      "distribution_B": {
+        "Executable": 91,
+        "Not executable": 26,
+        "Uncertain": 3
+      }
+    },
+    "goal_completion": {
+      "n": 120,
+      "agree": 101,
+      "observed_agreement": 0.8416666666666667,
+      "expected_agreement": 0.5349999999999999,
+      "kappa": 0.6594982078853048,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.5386586928662964,
+        "upper_95": 0.7826743133111984
+      },
+      "distribution_A": {
+        "Complete": 82,
+        "Not complete": 16,
+        "Partial": 22
+      },
+      "distribution_B": {
+        "Complete": 87,
+        "Not complete": 26,
+        "Partial": 7
+      }
+    },
+    "alternative_valid_plan": {
+      "n": 120,
+      "agree": 101,
+      "observed_agreement": 0.8416666666666667,
+      "expected_agreement": 0.545,
+      "kappa": 0.652014652014652,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.5106382978723405,
+        "upper_95": 0.7835888187556357
+      },
+      "distribution_A": {
+        "No": 48,
+        "Yes": 72
+      },
+      "distribution_B": {
+        "No": 33,
+        "Yes": 87
+      }
+    },
+    "primary_error_type": {
+      "n": 120,
+      "agree": 100,
+      "observed_agreement": 0.8333333333333334,
+      "expected_agreement": 0.4603472222222222,
+      "kappa": 0.6911594389396476,
+      "bootstrap_95_ci": {
+        "iterations": 2000,
+        "seed": 20260827,
+        "lower_95": 0.5623742454728369,
+        "upper_95": 0.804374405651406
+      },
+      "distribution_A": {
+        "Extra node": 5,
+        "Hallucination": 10,
+        "Missing edge": 1,
+        "Missing node": 12,
+        "None": 72,
+        "Wrong edge": 17,
+        "Wrong tool": 3
+      },
+      "distribution_B": {
+        "Extra node": 2,
+        "Hallucination": 10,
+        "Missing node": 12,
+        "None": 87,
+        "Wrong edge": 6,
+        "Wrong tool": 3
+      }
+    }
+  },
+  "all_five_core_fields_agree": {
+    "count": 91,
+    "total": 120,
+    "rate": 0.7583333333333333
+  },
+  "any_seven_field_disagreement": {
+    "count": 29,
+    "total": 120,
+    "rate": 0.24166666666666667
+  },
+  "provenance_diagnostics": {
+    "exact_rationale_matches": 91,
+    "unique_completion_timestamps_A": [
+      "2026-08-27 19:41:03"
+    ],
+    "unique_completion_timestamps_B": [
+      "2026-08-27 19:41:03"
+    ],
+    "note": "Workbook metadata alone cannot verify that A and B were completed by different people or independently."
+  },
+  "disagreements": [
+    {
+      "annotation_id": "P0003",
+      "task_id": "taskbench_dailylifeapis_23821362",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0008",
+      "task_id": "worf_alfworld_2081",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0018",
+      "task_id": "taskbench_dailylifeapis_61120470",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0022",
+      "task_id": "taskbench_huggingface_29118563",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0034",
+      "task_id": "taskbench_huggingface_22364747",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong tool"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong tool"
+      }
+    },
+    {
+      "annotation_id": "P0037",
+      "task_id": "taskbench_dailylifeapis_29607854",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "executability",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0042",
+      "task_id": "taskbench_dailylifeapis_32736495",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0047",
+      "task_id": "taskbench_huggingface_12255767",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0049",
+      "task_id": "worf_alfworld_1023",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0055",
+      "task_id": "worf_wikihow_43",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      }
+    },
+    {
+      "annotation_id": "P0057",
+      "task_id": "worf_wikihow_87",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      }
+    },
+    {
+      "annotation_id": "P0059",
+      "task_id": "worf_wikihow_86",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "executability",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0061",
+      "task_id": "taskbench_multimedia_29348560",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0066",
+      "task_id": "worf_alfworld_1132",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Not executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0070",
+      "task_id": "worf_alfworld_434",
+      "differing_fields": [
+        "overall_validity",
+        "executability",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0072",
+      "task_id": "taskbench_dailylifeapis_16272753",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0075",
+      "task_id": "worf_alfworld_1308",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "dependency_validity",
+        "executability",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      },
+      "B": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      }
+    },
+    {
+      "annotation_id": "P0077",
+      "task_id": "taskbench_dailylifeapis_37015512",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      },
+      "B": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      }
+    },
+    {
+      "annotation_id": "P0079",
+      "task_id": "taskbench_dailylifeapis_41605821",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0085",
+      "task_id": "taskbench_dailylifeapis_12868276",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0097",
+      "task_id": "worf_alfworld_172",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "executability",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Uncertain",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0099",
+      "task_id": "worf_alfworld_1895",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0100",
+      "task_id": "taskbench_multimedia_57301360",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Missing dependencies",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0102",
+      "task_id": "taskbench_dailylifeapis_11397110",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0104",
+      "task_id": "worf_wikihow_14",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0109",
+      "task_id": "taskbench_dailylifeapis_54114081",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0110",
+      "task_id": "worf_wikihow_29",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "goal_completion",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Extra node"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    },
+    {
+      "annotation_id": "P0116",
+      "task_id": "worf_alfworld_549",
+      "differing_fields": [
+        "overall_validity",
+        "tool_selection",
+        "goal_completion"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Partially correct",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Partial",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      },
+      "B": {
+        "overall_validity": "Invalid",
+        "tool_selection": "Incorrect",
+        "dependency_validity": "Correct",
+        "executability": "Not executable",
+        "goal_completion": "Not complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Missing node"
+      }
+    },
+    {
+      "annotation_id": "P0117",
+      "task_id": "taskbench_dailylifeapis_21426816",
+      "differing_fields": [
+        "overall_validity",
+        "dependency_validity",
+        "alternative_valid_plan",
+        "primary_error_type"
+      ],
+      "A": {
+        "overall_validity": "Partially valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Incorrect dependencies",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "No",
+        "primary_error_type": "Wrong edge"
+      },
+      "B": {
+        "overall_validity": "Valid",
+        "tool_selection": "Correct",
+        "dependency_validity": "Correct",
+        "executability": "Executable",
+        "goal_completion": "Complete",
+        "alternative_valid_plan": "Yes",
+        "primary_error_type": "None"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+node_modules/
+*.log
+*.aux
+*.out
+*.blg
+*.bbl
+*.tmp
+external_validation/doccano/账号信息.txt

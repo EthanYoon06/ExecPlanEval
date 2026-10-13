@@ -1,0 +1,12 @@
+﻿episode,game,objective,task_type,success,terminated,score,steps,admissible_rate,latency_seconds
+0,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222917_366542/game.tw-pddl,examine the alarmclock with the desklamp.,look_at_obj_in_light,True,True,1,17,1,11.915
+1,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222933_607649/game.tw-pddl,examine the alarmclock with the desklamp.,look_at_obj_in_light,True,True,1,18,1,8.025
+2,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222951_616606/game.tw-pddl,look at alarmclock under the desklamp.,look_at_obj_in_light,True,True,1,6,1,3.442
+3,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020029_636862/game.tw-pddl,examine the book with the desklamp.,look_at_obj_in_light,True,True,1,43,1,18.494
+4,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020048_814402/game.tw-pddl,examine the book with the desklamp.,look_at_obj_in_light,False,False,0,50,1,26.538
+5,/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222917_366542/game.tw-pddl,examine the alarmclock with the desklamp.,look_at_obj_in_light,True,True,1,17,1,7.404
+6,/opt/alfworld-data/json_2.1.1/valid_unseen/pick_and_place_simple-Mug-None-Desk-308/trial_T20190908_125200_737896/game.tw-pddl,put a mug in desk.,pick_and_place_simple,False,False,0,50,1,24.411
+7,/opt/alfworld-data/json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Bowl-None-Cabinet-10/trial_T20190909_061130_844814/game.tw-pddl,clean some bowl and put it in cabinet.,pick_clean_then_place_in_recep,False,False,0,50,1,21.397
+8,/opt/alfworld-data/json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091747_866951/game.tw-pddl,put a cool bread in countertop.,pick_cool_then_place_in_recep,False,False,0,50,1,23.787
+9,/opt/alfworld-data/json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182259_116320/game.tw-pddl,heat some apple and put it in fridge.,pick_heat_then_place_in_recep,False,False,0,50,1,22.637
+10,/opt/alfworld-data/json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_050942_897916/game.tw-pddl,put two cd in safe.,pick_two_obj_and_place,False,False,0,50,1,19.079

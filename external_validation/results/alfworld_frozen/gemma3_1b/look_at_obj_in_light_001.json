@@ -1,0 +1,58 @@
+{
+  "protocol": "single-shot frozen open-loop plan; no replanning or action substitution",
+  "model": "gemma3:1b",
+  "task_type": "look_at_obj_in_light",
+  "game_index": 1,
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222933_607649/game.tw-pddl",
+  "objective": "examine the alarmclock with the desklamp.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: examine the alarmclock with the desklamp.",
+  "initial_admissible_commands": [
+    "go to bed 1",
+    "go to desk 1",
+    "go to desk 2",
+    "go to drawer 1",
+    "go to drawer 2",
+    "go to drawer 3",
+    "go to drawer 4",
+    "go to drawer 5",
+    "go to drawer 6",
+    "go to garbagecan 1",
+    "go to laundryhamper 1",
+    "go to safe 1",
+    "go to shelf 1",
+    "go to shelf 2",
+    "go to shelf 3",
+    "go to shelf 4",
+    "go to shelf 5",
+    "go to shelf 6",
+    "help",
+    "inventory",
+    "look"
+  ],
+  "raw_model_output": "{\"actions\": [{\"command\": \"go to desk 1\"}]}",
+  "parse_success": true,
+  "planned_actions": [
+    "{'command': 'go to desk 1'}"
+  ],
+  "executed_trace": [
+    {
+      "step": 1,
+      "action": "{'command': 'go to desk 1'}",
+      "admissible_before_step": false,
+      "observation": "Nothing happens.",
+      "score": 0,
+      "done": false,
+      "won": false
+    }
+  ],
+  "planned_action_count": 1,
+  "executed_action_count": 1,
+  "admissible_action_rate": 0.0,
+  "schema_validity": 0.0,
+  "abstract_dependency_validity": 1.0,
+  "pre_execution_score": 0.5,
+  "success": false,
+  "final_score": 0,
+  "terminated": false,
+  "latency_seconds": 1.497
+}

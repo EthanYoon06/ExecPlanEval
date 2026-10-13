@@ -1,0 +1,339 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163408_914117/game.tw-pddl",
+  "objective": "put two pillow in sofa.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.\n\nYour task is to: put two pillow in sofa.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a safe 1, a shelf 12, a shelf 11, a shelf 10, a shelf 9, a shelf 8, a shelf 7, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, a shelf 1, a sidetable 1, and a sofa 1.\n\nYour task is to: put two pillow in sofa.",
+      "action": "go to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sofa 1\"}",
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3.",
+      "action": "examine sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine sofa 1\"}",
+      "observation": "On the sofa 1, you see a newspaper 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "On the sofa 1, you see a newspaper 3.",
+      "action": "go to armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to armchair 1\"}",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a cellphone 2, a pillow 2, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at armchair 1. On the armchair 1, you see a cellphone 2, a pillow 2, and a pillow 1.",
+      "action": "take pillow 1 from armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pillow 1 from armchair 1\"}",
+      "observation": "You pick up the pillow 1 from the armchair 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "You pick up the pillow 1 from the armchair 1.",
+      "action": "go to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sofa 1\"}",
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3.",
+      "action": "move pillow 1 to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pillow 1 to sofa 1\"}",
+      "observation": "You move the pillow 1 to the sofa 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "You move the pillow 1 to the sofa 1.",
+      "action": "examine sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pillow 2 from armchair 1\"}",
+      "observation": "On the sofa 1, you see a newspaper 3, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "On the sofa 1, you see a newspaper 3, and a pillow 1.",
+      "action": "take newspaper 3 from sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take newspaper 3 from sofa 1\"}",
+      "observation": "You pick up the newspaper 3 from the sofa 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "You pick up the newspaper 3 from the sofa 1.",
+      "action": "move newspaper 3 to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move newspaper 3 to sofa 1\"}",
+      "observation": "You move the newspaper 3 to the sofa 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You move the newspaper 3 to the sofa 1.",
+      "action": "take pillow 1 from sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pillow 1 from sofa 1\"}",
+      "observation": "You pick up the pillow 1 from the sofa 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "You pick up the pillow 1 from the sofa 1.",
+      "action": "move pillow 1 to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pillow 1 to sofa 1\"}",
+      "observation": "You move the pillow 1 to the sofa 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "You move the pillow 1 to the sofa 1.",
+      "action": "go to armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to armchair 1\"}",
+      "observation": "You arrive at armchair 1. On the armchair 1, you see a cellphone 2, and a pillow 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "You arrive at armchair 1. On the armchair 1, you see a cellphone 2, and a pillow 2.",
+      "action": "take pillow 2 from armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pillow 2 from armchair 1\"}",
+      "observation": "You pick up the pillow 2 from the armchair 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You pick up the pillow 2 from the armchair 1.",
+      "action": "examine armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pillow 2 to sofa 1\"}",
+      "observation": "On the armchair 1, you see a cellphone 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "On the armchair 1, you see a cellphone 2.",
+      "action": "examine armchair 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pillow 2 to sofa 1\"}",
+      "observation": "On the armchair 1, you see a cellphone 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "On the armchair 1, you see a cellphone 2.",
+      "action": "go to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sofa 1\"}",
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "You arrive at sofa 1. On the sofa 1, you see a newspaper 3, and a pillow 1.",
+      "action": "move pillow 2 to sofa 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pillow 2 to sofa 1\"}",
+      "observation": "You move the pillow 2 to the sofa 1.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to sofa 1"
+      },
+      {
+        "id": "2",
+        "label": "examine sofa 1"
+      },
+      {
+        "id": "3",
+        "label": "go to armchair 1"
+      },
+      {
+        "id": "4",
+        "label": "take pillow 1 from armchair 1"
+      },
+      {
+        "id": "5",
+        "label": "go to sofa 1"
+      },
+      {
+        "id": "6",
+        "label": "move pillow 1 to sofa 1"
+      },
+      {
+        "id": "7",
+        "label": "examine sofa 1"
+      },
+      {
+        "id": "8",
+        "label": "take newspaper 3 from sofa 1"
+      },
+      {
+        "id": "9",
+        "label": "move newspaper 3 to sofa 1"
+      },
+      {
+        "id": "10",
+        "label": "take pillow 1 from sofa 1"
+      },
+      {
+        "id": "11",
+        "label": "move pillow 1 to sofa 1"
+      },
+      {
+        "id": "12",
+        "label": "go to armchair 1"
+      },
+      {
+        "id": "13",
+        "label": "take pillow 2 from armchair 1"
+      },
+      {
+        "id": "14",
+        "label": "examine armchair 1"
+      },
+      {
+        "id": "15",
+        "label": "examine armchair 1"
+      },
+      {
+        "id": "16",
+        "label": "go to sofa 1"
+      },
+      {
+        "id": "17",
+        "label": "move pillow 2 to sofa 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      }
+    ]
+  },
+  "steps": 17,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 8.147
+}

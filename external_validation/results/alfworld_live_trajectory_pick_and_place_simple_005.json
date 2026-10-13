@@ -1,0 +1,719 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_122154_042763/game.tw-pddl",
+  "objective": "put a pencil in shelf.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put a pencil in shelf.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put a pencil in shelf.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "action": "examine shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 1\"}",
+      "observation": "On the shelf 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "On the shelf 1, you see nothing.",
+      "action": "go to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 2\"}",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "action": "examine shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 2\"}",
+      "observation": "On the shelf 2, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "On the shelf 2, you see a mug 1.",
+      "action": "take mug 1 from shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take mug 1 from shelf 2\"}",
+      "observation": "You pick up the mug 1 from the shelf 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You pick up the mug 1 from the shelf 2.",
+      "action": "move mug 1 to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move mug 1 to shelf 2\"}",
+      "observation": "You move the mug 1 to the shelf 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "You move the mug 1 to the shelf 2.",
+      "action": "go to shelf 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 3\"}",
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "action": "examine shelf 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 3\"}",
+      "observation": "On the shelf 3, you see a desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "On the shelf 3, you see a desklamp 1.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "action": "go to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 2\"}",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "action": "take mug 1 from shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take mug 1 from shelf 2\"}",
+      "observation": "You pick up the mug 1 from the shelf 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "You pick up the mug 1 from the shelf 2.",
+      "action": "examine shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 2\"}",
+      "observation": "On the shelf 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "On the shelf 2, you see nothing.",
+      "action": "move mug 1 to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move mug 1 to shelf 2\"}",
+      "observation": "You move the mug 1 to the shelf 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You move the mug 1 to the shelf 2.",
+      "action": "go to shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 4\"}",
+      "observation": "You arrive at shelf 4. On the shelf 4, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "You arrive at shelf 4. On the shelf 4, you see a alarmclock 1.",
+      "action": "examine shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 4\"}",
+      "observation": "On the shelf 4, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "On the shelf 4, you see a alarmclock 1.",
+      "action": "take alarmclock 1 from shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take alarmclock 1 from shelf 4\"}",
+      "observation": "You pick up the alarmclock 1 from the shelf 4.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "You pick up the alarmclock 1 from the shelf 4.",
+      "action": "examine shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 4\"}",
+      "observation": "On the shelf 4, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 18,
+      "before_observation": "On the shelf 4, you see nothing.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 19,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "action": "go to shelf 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 3\"}",
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 20,
+      "before_observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 21,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see nothing.",
+      "action": "move alarmclock 1 to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move alarmclock 1 to shelf 1\"}",
+      "observation": "You move the alarmclock 1 to the shelf 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 22,
+      "before_observation": "You move the alarmclock 1 to the shelf 1.",
+      "action": "examine shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 1\"}",
+      "observation": "On the shelf 1, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 23,
+      "before_observation": "On the shelf 1, you see a alarmclock 1.",
+      "action": "go to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 2\"}",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 24,
+      "before_observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "action": "go to shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 4\"}",
+      "observation": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 25,
+      "before_observation": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+      "action": "examine shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 4\"}",
+      "observation": "On the shelf 4, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 26,
+      "before_observation": "On the shelf 4, you see nothing.",
+      "action": "go to shelf 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 3\"}",
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 27,
+      "before_observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "action": "go to shelf 5",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 5\"}",
+      "observation": "You arrive at shelf 5. On the shelf 5, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 28,
+      "before_observation": "You arrive at shelf 5. On the shelf 5, you see nothing.",
+      "action": "examine shelf 5",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 5\"}",
+      "observation": "On the shelf 5, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 29,
+      "before_observation": "On the shelf 5, you see nothing.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 30,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1.",
+      "action": "examine shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine shelf 1\"}",
+      "observation": "On the shelf 1, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 31,
+      "before_observation": "On the shelf 1, you see a alarmclock 1.",
+      "action": "go to shelf 4",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 4\"}",
+      "observation": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 32,
+      "before_observation": "You arrive at shelf 4. On the shelf 4, you see nothing.",
+      "action": "go to shelf 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 2\"}",
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 33,
+      "before_observation": "You arrive at shelf 2. On the shelf 2, you see a mug 1.",
+      "action": "go to shelf 3",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 3\"}",
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 34,
+      "before_observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1.",
+      "action": "go to desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to desk 1\"}",
+      "observation": "You arrive at desk 1. On the desk 1, you see a desklamp 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 35,
+      "before_observation": "You arrive at desk 1. On the desk 1, you see a desklamp 1, and a pencil 1.",
+      "action": "take pencil 1 from desk 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take pencil 1 from desk 1\"}",
+      "observation": "You pick up the pencil 1 from the desk 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 36,
+      "before_observation": "You pick up the pencil 1 from the desk 1.",
+      "action": "go to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to shelf 1\"}",
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 37,
+      "before_observation": "You arrive at shelf 1. On the shelf 1, you see a alarmclock 1.",
+      "action": "move pencil 1 to shelf 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move pencil 1 to shelf 1\"}",
+      "observation": "You move the pencil 1 to the shelf 1.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "2",
+        "label": "examine shelf 1"
+      },
+      {
+        "id": "3",
+        "label": "go to shelf 2"
+      },
+      {
+        "id": "4",
+        "label": "examine shelf 2"
+      },
+      {
+        "id": "5",
+        "label": "take mug 1 from shelf 2"
+      },
+      {
+        "id": "6",
+        "label": "move mug 1 to shelf 2"
+      },
+      {
+        "id": "7",
+        "label": "go to shelf 3"
+      },
+      {
+        "id": "8",
+        "label": "examine shelf 3"
+      },
+      {
+        "id": "9",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "10",
+        "label": "go to shelf 2"
+      },
+      {
+        "id": "11",
+        "label": "take mug 1 from shelf 2"
+      },
+      {
+        "id": "12",
+        "label": "examine shelf 2"
+      },
+      {
+        "id": "13",
+        "label": "move mug 1 to shelf 2"
+      },
+      {
+        "id": "14",
+        "label": "go to shelf 4"
+      },
+      {
+        "id": "15",
+        "label": "examine shelf 4"
+      },
+      {
+        "id": "16",
+        "label": "take alarmclock 1 from shelf 4"
+      },
+      {
+        "id": "17",
+        "label": "examine shelf 4"
+      },
+      {
+        "id": "18",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "19",
+        "label": "go to shelf 3"
+      },
+      {
+        "id": "20",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "21",
+        "label": "move alarmclock 1 to shelf 1"
+      },
+      {
+        "id": "22",
+        "label": "examine shelf 1"
+      },
+      {
+        "id": "23",
+        "label": "go to shelf 2"
+      },
+      {
+        "id": "24",
+        "label": "go to shelf 4"
+      },
+      {
+        "id": "25",
+        "label": "examine shelf 4"
+      },
+      {
+        "id": "26",
+        "label": "go to shelf 3"
+      },
+      {
+        "id": "27",
+        "label": "go to shelf 5"
+      },
+      {
+        "id": "28",
+        "label": "examine shelf 5"
+      },
+      {
+        "id": "29",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "30",
+        "label": "examine shelf 1"
+      },
+      {
+        "id": "31",
+        "label": "go to shelf 4"
+      },
+      {
+        "id": "32",
+        "label": "go to shelf 2"
+      },
+      {
+        "id": "33",
+        "label": "go to shelf 3"
+      },
+      {
+        "id": "34",
+        "label": "go to desk 1"
+      },
+      {
+        "id": "35",
+        "label": "take pencil 1 from desk 1"
+      },
+      {
+        "id": "36",
+        "label": "go to shelf 1"
+      },
+      {
+        "id": "37",
+        "label": "move pencil 1 to shelf 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      },
+      {
+        "source": "17",
+        "target": "18"
+      },
+      {
+        "source": "18",
+        "target": "19"
+      },
+      {
+        "source": "19",
+        "target": "20"
+      },
+      {
+        "source": "20",
+        "target": "21"
+      },
+      {
+        "source": "21",
+        "target": "22"
+      },
+      {
+        "source": "22",
+        "target": "23"
+      },
+      {
+        "source": "23",
+        "target": "24"
+      },
+      {
+        "source": "24",
+        "target": "25"
+      },
+      {
+        "source": "25",
+        "target": "26"
+      },
+      {
+        "source": "26",
+        "target": "27"
+      },
+      {
+        "source": "27",
+        "target": "28"
+      },
+      {
+        "source": "28",
+        "target": "29"
+      },
+      {
+        "source": "29",
+        "target": "30"
+      },
+      {
+        "source": "30",
+        "target": "31"
+      },
+      {
+        "source": "31",
+        "target": "32"
+      },
+      {
+        "source": "32",
+        "target": "33"
+      },
+      {
+        "source": "33",
+        "target": "34"
+      },
+      {
+        "source": "34",
+        "target": "35"
+      },
+      {
+        "source": "35",
+        "target": "36"
+      },
+      {
+        "source": "36",
+        "target": "37"
+      }
+    ]
+  },
+  "steps": 37,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 13.687
+}

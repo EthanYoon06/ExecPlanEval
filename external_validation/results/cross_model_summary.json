@@ -1,0 +1,85 @@
+{
+  "models": {
+    "gemma3:1b": {
+      "n": 120,
+      "mean_parse_success": 0.975,
+      "mean_graph_valid": 0.5833333333333334,
+      "mean_node_f1": 0.18728405,
+      "mean_edge_f1": 0.00238095,
+      "mean_fuzzy_node_f1": 0.252303275,
+      "mean_catalog_validity": 0.31420634166666667,
+      "run1_n": 120,
+      "run1_mean_parse_success": 0.975,
+      "run1_mean_graph_valid": 0.5833333333333334,
+      "run1_mean_node_f1": 0.18728405,
+      "run1_mean_edge_f1": 0.00238095,
+      "run1_mean_fuzzy_node_f1": 0.252303275,
+      "run1_mean_catalog_validity": 0.31420634166666667
+    },
+    "qwen3:8b": {
+      "n": 360,
+      "mean_parse_success": 0.9944444444444445,
+      "mean_graph_valid": 0.9944444444444445,
+      "mean_node_f1": 0.5642126055555555,
+      "mean_edge_f1": 0.2575575166666667,
+      "mean_fuzzy_node_f1": 0.6881965138888889,
+      "mean_catalog_validity": 0.9902777777777778,
+      "run1_n": 120,
+      "run1_mean_parse_success": 1.0,
+      "run1_mean_graph_valid": 1.0,
+      "run1_mean_node_f1": 0.5641505250000001,
+      "run1_mean_edge_f1": 0.25924525,
+      "run1_mean_fuzzy_node_f1": 0.6869080249999999,
+      "run1_mean_catalog_validity": 0.9958333333333333
+    }
+  },
+  "paired_run1": {
+    "left_model": "gemma3:1b",
+    "right_model": "qwen3:8b",
+    "n_matched_tasks": 120,
+    "metrics": {
+      "parse_success": {
+        "right_minus_left": 0.025,
+        "task_bootstrap_95_ci": [
+          0.0,
+          0.058333333333333334
+        ]
+      },
+      "graph_valid": {
+        "right_minus_left": 0.4166666666666667,
+        "task_bootstrap_95_ci": [
+          0.3333333333333333,
+          0.5083333333333333
+        ]
+      },
+      "node_f1": {
+        "right_minus_left": 0.376866475,
+        "task_bootstrap_95_ci": [
+          0.29794913333333334,
+          0.4548755583333334
+        ]
+      },
+      "edge_f1": {
+        "right_minus_left": 0.2568643,
+        "task_bootstrap_95_ci": [
+          0.18809694166666666,
+          0.32825676666666664
+        ]
+      },
+      "fuzzy_node_f1": {
+        "right_minus_left": 0.43460475,
+        "task_bootstrap_95_ci": [
+          0.36758925833333334,
+          0.5010268333333333
+        ]
+      },
+      "catalog_validity": {
+        "right_minus_left": 0.6816269916666666,
+        "task_bootstrap_95_ci": [
+          0.6038492166666667,
+          0.7591666666666667
+        ]
+      }
+    }
+  }
+}

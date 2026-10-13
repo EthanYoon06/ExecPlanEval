@@ -1,0 +1,67 @@
+{
+  "tasks": 10,
+  "candidates": 60,
+  "label_execution_agreement": 1.0,
+  "metric_analysis": {
+    "node_f1": {
+      "spearman_with_execution": 0.0,
+      "auroc_for_valid_plan": 0.5
+    },
+    "edge_f1": {
+      "spearman_with_execution": 0.5330017908890261,
+      "auroc_for_valid_plan": 0.8125
+    },
+    "pre_execution_score": {
+      "spearman_with_execution": 0.9797958971132713,
+      "auroc_for_valid_plan": 1.0
+    },
+    "execplaneval_score": {
+      "spearman_with_execution": 0.9797958971132713,
+      "auroc_for_valid_plan": 1.0
+    }
+  },
+  "by_variant": {
+    "invalid_missing_branch": {
+      "count": 10,
+      "execution_success_rate": 0.0,
+      "mean_node_f1": 0.857143,
+      "mean_edge_f1": 0.8,
+      "mean_execplaneval_score": 0.4375
+    },
+    "invalid_reversed_dependency": {
+      "count": 10,
+      "execution_success_rate": 0.0,
+      "mean_node_f1": 1.0,
+      "mean_edge_f1": 0.666667,
+      "mean_execplaneval_score": 0.45
+    },
+    "reference": {
+      "count": 10,
+      "execution_success_rate": 1.0,
+      "mean_node_f1": 1.0,
+      "mean_edge_f1": 1.0,
+      "mean_execplaneval_score": 1.0
+    },
+    "valid_equivalent_tool": {
+      "count": 10,
+      "execution_success_rate": 1.0,
+      "mean_node_f1": 0.75,
+      "mean_edge_f1": 0.666667,
+      "mean_execplaneval_score": 1.0
+    },
+    "valid_redundant_audit": {
+      "count": 10,
+      "execution_success_rate": 1.0,
+      "mean_node_f1": 0.888889,
+      "mean_edge_f1": 0.857143,
+      "mean_execplaneval_score": 1.0
+    },
+    "valid_serialization": {
+      "count": 10,
+      "execution_success_rate": 1.0,
+      "mean_node_f1": 1.0,
+      "mean_edge_f1": 0.857143,
+      "mean_execplaneval_score": 1.0
+    }
+  }
+}

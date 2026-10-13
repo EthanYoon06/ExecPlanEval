@@ -1,0 +1,63 @@
+{
+  "scope": "TaskBench multimedia and huggingface run-1 plans with independently supplied tool input/output types",
+  "sample_size": 40,
+  "subsets": {
+    "huggingface": 20,
+    "multimedia": 20
+  },
+  "label_counts": {
+    "Invalid": 3,
+    "Partially valid": 6,
+    "Valid": 31
+  },
+  "metrics": {
+    "catalog_validity": {
+      "spearman_rho": 0.0,
+      "spearman_task_bootstrap_95ci": [
+        0.0,
+        0.0
+      ],
+      "auroc_valid_vs_other": 0.5,
+      "auroc_task_bootstrap_95ci": [
+        0.5,
+        0.5
+      ]
+    },
+    "edge_type_compatibility": {
+      "spearman_rho": 0.36508850059684106,
+      "spearman_task_bootstrap_95ci": [
+        -0.09475308242990564,
+        0.7119554107389781
+      ],
+      "auroc_valid_vs_other": 0.6308243727598566,
+      "auroc_task_bootstrap_95ci": [
+        0.4696969696969697,
+        0.8088235294117647
+      ]
+    },
+    "typed_contract_score": {
+      "spearman_rho": 0.36508850059684106,
+      "spearman_task_bootstrap_95ci": [
+        -0.09475308242990564,
+        0.7119554107389781
+      ],
+      "auroc_valid_vs_other": 0.6308243727598566,
+      "auroc_task_bootstrap_95ci": [
+        0.4696969696969697,
+        0.8088235294117647
+      ]
+    }
+  },
+  "means": {
+    "graph_validity": 1.0,
+    "catalog_validity": 1.0,
+    "edge_type_compatibility": 0.9470833333333333,
+    "typed_contract_score": 0.9823611111111111
+  },
+  "limitations": [
+    "Input/output type overlap tests edge compatibility, not whether every required dependency is present.",
+    "Candidate nodes contain tool names but not argument bindings, so argument-level validation is unavailable.",
+    "No execution outcome is available; overall validity comes from the adjudicated annotation layer.",
+    "The score is a typed-contract diagnostic, not the complete ExecPlanEval score."
+  ]
+}

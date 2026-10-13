@@ -1,0 +1,247 @@
+{
+  "protocol": "single-shot frozen open-loop plan; no replanning or action substitution",
+  "model": "qwen3:8b",
+  "task_type": "pick_and_place_simple",
+  "game_index": 3,
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_121952_610012/game.tw-pddl",
+  "objective": "put a pencil in shelf.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 2, a desk 1, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a laundryhamper 1, a safe 1, a shelf 6, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.\n\nYour task is to: put a pencil in shelf.",
+  "initial_admissible_commands": [
+    "go to bed 1",
+    "go to desk 1",
+    "go to desk 2",
+    "go to drawer 1",
+    "go to drawer 2",
+    "go to drawer 3",
+    "go to drawer 4",
+    "go to drawer 5",
+    "go to drawer 6",
+    "go to garbagecan 1",
+    "go to laundryhamper 1",
+    "go to safe 1",
+    "go to shelf 1",
+    "go to shelf 2",
+    "go to shelf 3",
+    "go to shelf 4",
+    "go to shelf 5",
+    "go to shelf 6",
+    "help",
+    "inventory",
+    "look"
+  ],
+  "raw_model_output": "{\"actions\":[\"go to shelf 1\",\"go to shelf 2\",\"go to shelf 3\",\"go to shelf 4\",\"go to shelf 5\",\"go to shelf 6\",\"go to desk 1\",\"go to desk 2\",\"look\",\"inventory\",\"go to drawer 1\",\"go to drawer 2\",\"go to drawer 3\",\"go to drawer 4\",\"go to drawer 5\",\"go to drawer 6\",\"go to garbagecan 1\",\"go to laundryhamper 1\",\"go to safe 1\",\"go to bed 1\"]}",
+  "planned_actions": [
+    "go to shelf 1",
+    "go to shelf 2",
+    "go to shelf 3",
+    "go to shelf 4",
+    "go to shelf 5",
+    "go to shelf 6",
+    "go to desk 1",
+    "go to desk 2",
+    "look",
+    "inventory",
+    "go to drawer 1",
+    "go to drawer 2",
+    "go to drawer 3",
+    "go to drawer 4",
+    "go to drawer 5",
+    "go to drawer 6",
+    "go to garbagecan 1",
+    "go to laundryhamper 1",
+    "go to safe 1",
+    "go to bed 1"
+  ],
+  "executed_trace": [
+    {
+      "step": 1,
+      "action": "go to shelf 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 1. On the shelf 1, you see a keychain 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "action": "go to shelf 2",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 2. On the shelf 2, you see a alarmclock 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "action": "go to shelf 3",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 3. On the shelf 3, you see a desklamp 1, and a keychain 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "action": "go to shelf 4",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 4. On the shelf 4, you see a alarmclock 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "action": "go to shelf 5",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 5. On the shelf 5, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "action": "go to shelf 6",
+      "admissible_before_step": true,
+      "observation": "You arrive at shelf 6. On the shelf 6, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "action": "go to desk 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at desk 1. On the desk 1, you see a desklamp 1, a keychain 1, and a pencil 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "action": "go to desk 2",
+      "admissible_before_step": true,
+      "observation": "You arrive at desk 2. On the desk 2, you see a bowl 1, a cellphone 3, a mug 2, a mug 1, and a pencil 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "action": "look",
+      "admissible_before_step": true,
+      "observation": "You are facing the desk 2. Next to it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "action": "inventory",
+      "admissible_before_step": true,
+      "observation": "You are not carrying anything.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "action": "go to drawer 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "action": "go to drawer 2",
+      "admissible_before_step": true,
+      "observation": "You arrive at drawer 2. On the drawer 2, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "action": "go to drawer 3",
+      "admissible_before_step": false,
+      "observation": "Nothing happens.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "action": "go to drawer 4",
+      "admissible_before_step": true,
+      "observation": "You arrive at drawer 4. The drawer 4 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "action": "go to drawer 5",
+      "admissible_before_step": true,
+      "observation": "You arrive at drawer 5. On the drawer 5, you see a creditcard 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "action": "go to drawer 6",
+      "admissible_before_step": true,
+      "observation": "You arrive at drawer 6. The drawer 6 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "action": "go to garbagecan 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at garbagecan 1. On the garbagecan 1, you see a cd 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 18,
+      "action": "go to laundryhamper 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at laundryhamper 1. On the laundryhamper 1, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 19,
+      "action": "go to safe 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at safe 1. The safe 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 20,
+      "action": "go to bed 1",
+      "admissible_before_step": true,
+      "observation": "You arrive at bed 1. On the bed 1, you see a book 1, a cellphone 1, a laptop 1, a pillow 2, and a pillow 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    }
+  ],
+  "planned_action_count": 20,
+  "executed_action_count": 20,
+  "admissible_action_rate": 0.95,
+  "schema_validity": 0.95,
+  "abstract_dependency_validity": 1.0,
+  "pre_execution_score": 0.975,
+  "success": false,
+  "final_score": 0,
+  "terminated": false,
+  "latency_seconds": 4.523
+}

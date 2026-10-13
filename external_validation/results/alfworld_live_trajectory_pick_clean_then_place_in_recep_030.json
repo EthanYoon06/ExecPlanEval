@@ -1,0 +1,453 @@
+{
+  "model": "qwen3:8b",
+  "environment": "ALFWorld TextWorld valid_unseen",
+  "game": "/opt/alfworld-data/json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Spatula-None-Drawer-10/trial_T20190907_080825_222432/game.tw-pddl",
+  "objective": "clean some spatula and put it in drawer.",
+  "initial_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: clean some spatula and put it in drawer.",
+  "trajectory": [
+    {
+      "step": 1,
+      "before_observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 3, a countertop 2, a countertop 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a shelf 3, a shelf 2, a shelf 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.\n\nYour task is to: clean some spatula and put it in drawer.",
+      "action": "go to sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sinkbasin 1\"}",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 2,
+      "before_observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "examine sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine sinkbasin 1\"}",
+      "observation": "On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 3,
+      "before_observation": "On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 4,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "action": "open drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open drawer 1\"}",
+      "observation": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 5,
+      "before_observation": "You open the drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "action": "go to sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sinkbasin 1\"}",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 6,
+      "before_observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a creditcard 2, and a peppershaker 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 7,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a creditcard 2, and a peppershaker 1.",
+      "action": "go to sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sinkbasin 1\"}",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 8,
+      "before_observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "go to cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 1\"}",
+      "observation": "You arrive at cabinet 1. On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 9,
+      "before_observation": "You arrive at cabinet 1. On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "action": "go to cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 2\"}",
+      "observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 10,
+      "before_observation": "You arrive at cabinet 2. The cabinet 2 is closed.",
+      "action": "examine cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine cabinet 2\"}",
+      "observation": "The cabinet 2 is closed.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 11,
+      "before_observation": "The cabinet 2 is closed.",
+      "action": "open cabinet 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"open cabinet 2\"}",
+      "observation": "You open the cabinet 2. The cabinet 2 is open. In it, you see a dishsponge 1, and a plate 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 12,
+      "before_observation": "You open the cabinet 2. The cabinet 2 is open. In it, you see a dishsponge 1, and a plate 1.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 13,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "action": "go to countertop 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 1\"}",
+      "observation": "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a creditcard 2, and a peppershaker 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 14,
+      "before_observation": "You arrive at countertop 1. On the countertop 1, you see a bowl 1, a creditcard 2, and a peppershaker 1.",
+      "action": "go to cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to cabinet 1\"}",
+      "observation": "You arrive at cabinet 1. On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 15,
+      "before_observation": "You arrive at cabinet 1. On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "action": "examine cabinet 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"examine cabinet 1\"}",
+      "observation": "On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 16,
+      "before_observation": "On the cabinet 1, you see a saltshaker 1, a vase 2, and a vase 1.",
+      "action": "go to sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sinkbasin 1\"}",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 17,
+      "before_observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 18,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "action": "go to countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to countertop 2\"}",
+      "observation": "You arrive at countertop 2. On the countertop 2, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 1, a spatula 1, a spoon 1, a statue 1, and a tomato 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 19,
+      "before_observation": "You arrive at countertop 2. On the countertop 2, you see a bread 2, a bread 1, a butterknife 2, a butterknife 1, a fork 1, a spatula 1, a spoon 1, a statue 1, and a tomato 1.",
+      "action": "take spatula 1 from countertop 2",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"take spatula 1 from countertop 2\"}",
+      "observation": "You pick up the spatula 1 from the countertop 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 20,
+      "before_observation": "You pick up the spatula 1 from the countertop 2.",
+      "action": "go to sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to sinkbasin 1\"}",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 21,
+      "before_observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see a plate 2, a potato 2, and a tomato 2.",
+      "action": "clean spatula 1 with sinkbasin 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"clean spatula 1 with sinkbasin 1\"}",
+      "observation": "You clean the spatula 1 using the sinkbasin 1.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 22,
+      "before_observation": "You clean the spatula 1 using the sinkbasin 1.",
+      "action": "go to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"go to drawer 1\"}",
+      "observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "score": 0,
+      "done": false,
+      "won": false
+    },
+    {
+      "step": 23,
+      "before_observation": "You arrive at drawer 1. The drawer 1 is open. In it, you see nothing.",
+      "action": "move spatula 1 to drawer 1",
+      "action_was_admissible": true,
+      "raw_model_output": "{\"action\":\"move spatula 1 to drawer 1\"}",
+      "observation": "You move the spatula 1 to the drawer 1.",
+      "score": 1,
+      "done": true,
+      "won": true
+    }
+  ],
+  "trajectory_dag": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "go to sinkbasin 1"
+      },
+      {
+        "id": "2",
+        "label": "examine sinkbasin 1"
+      },
+      {
+        "id": "3",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "4",
+        "label": "open drawer 1"
+      },
+      {
+        "id": "5",
+        "label": "go to sinkbasin 1"
+      },
+      {
+        "id": "6",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "7",
+        "label": "go to sinkbasin 1"
+      },
+      {
+        "id": "8",
+        "label": "go to cabinet 1"
+      },
+      {
+        "id": "9",
+        "label": "go to cabinet 2"
+      },
+      {
+        "id": "10",
+        "label": "examine cabinet 2"
+      },
+      {
+        "id": "11",
+        "label": "open cabinet 2"
+      },
+      {
+        "id": "12",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "13",
+        "label": "go to countertop 1"
+      },
+      {
+        "id": "14",
+        "label": "go to cabinet 1"
+      },
+      {
+        "id": "15",
+        "label": "examine cabinet 1"
+      },
+      {
+        "id": "16",
+        "label": "go to sinkbasin 1"
+      },
+      {
+        "id": "17",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "18",
+        "label": "go to countertop 2"
+      },
+      {
+        "id": "19",
+        "label": "take spatula 1 from countertop 2"
+      },
+      {
+        "id": "20",
+        "label": "go to sinkbasin 1"
+      },
+      {
+        "id": "21",
+        "label": "clean spatula 1 with sinkbasin 1"
+      },
+      {
+        "id": "22",
+        "label": "go to drawer 1"
+      },
+      {
+        "id": "23",
+        "label": "move spatula 1 to drawer 1"
+      }
+    ],
+    "edges": [
+      {
+        "source": "1",
+        "target": "2"
+      },
+      {
+        "source": "2",
+        "target": "3"
+      },
+      {
+        "source": "3",
+        "target": "4"
+      },
+      {
+        "source": "4",
+        "target": "5"
+      },
+      {
+        "source": "5",
+        "target": "6"
+      },
+      {
+        "source": "6",
+        "target": "7"
+      },
+      {
+        "source": "7",
+        "target": "8"
+      },
+      {
+        "source": "8",
+        "target": "9"
+      },
+      {
+        "source": "9",
+        "target": "10"
+      },
+      {
+        "source": "10",
+        "target": "11"
+      },
+      {
+        "source": "11",
+        "target": "12"
+      },
+      {
+        "source": "12",
+        "target": "13"
+      },
+      {
+        "source": "13",
+        "target": "14"
+      },
+      {
+        "source": "14",
+        "target": "15"
+      },
+      {
+        "source": "15",
+        "target": "16"
+      },
+      {
+        "source": "16",
+        "target": "17"
+      },
+      {
+        "source": "17",
+        "target": "18"
+      },
+      {
+        "source": "18",
+        "target": "19"
+      },
+      {
+        "source": "19",
+        "target": "20"
+      },
+      {
+        "source": "20",
+        "target": "21"
+      },
+      {
+        "source": "21",
+        "target": "22"
+      },
+      {
+        "source": "22",
+        "target": "23"
+      }
+    ]
+  },
+  "steps": 23,
+  "final_score": 1,
+  "success": true,
+  "terminated": true,
+  "latency_seconds": 11.519
+}
